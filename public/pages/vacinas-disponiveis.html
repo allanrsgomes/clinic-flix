@@ -1,0 +1,377 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="../assets/css/base.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/container.css" type="text/css">
+
+    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/menus.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/cards.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/text.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/vacinas-disponiveis.css" type="text/css">
+
+    <title>Vacinas Disponíveis - Panvel Clinic</title>
+</head>
+
+
+<div class="LHWrapperBody">
+    <div class="hoverContent">
+        <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
+            target="_blank" rel="noopener">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
+                alt="ÍconeWhatsApp">
+        </a>
+    </div>
+    <div class="content-header LHHeaderInfo vacinas-menu-header" id="LHInfoHeader">
+        <div class="innerHeader">
+            <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+            <img src="../assets/images/Group.png" class="clinic-logo">
+        </div>
+        <div class="header-banner">
+            <div class="partner-info">
+                <div class="name-info">
+                    <h1 class="headerTitle">Vacinas</h1>
+                    <div class="headerDescription">A importância da vacinação vai muito além da prevenção individual. Ao
+                        se vacinar,
+                        você ajuda toda a comunidade a reduzir os casos de diversas doenças.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="LHContainer">
+        <div class="inner-content default-content">
+            <div id="vacinas-disponiveis-panvel">
+                <div class="container-geral" style="margin-right: 25px;margin-top:10px">
+                    <div class="menuInternoCards-desktop">
+
+                        <div class="container-filtro-idades ">
+                            <input type="checkbox" id="chck1">
+                            <label class="filtrar-idades" for="chck1">
+                                <span>FILTRE POR IDADE</span>
+                            </label>
+                            <div class="container-todas-idades">
+                                <div class="todas-idades-cat">
+                                    <div class="linha-cinza"></div>
+
+                                    <p>BEBÊ</p>
+                                    <ul class="options-checkbox">
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(1, this)" id="aonascer" class="check"
+                                                    type="checkbox" />
+                                                <label for="aonascer">Ao nascer</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(2, this)" id="dois" class="check"
+                                                    type="checkbox" />
+                                                <label for="dois">2 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(3, this)" id="tres" class="check"
+                                                    type="checkbox" />
+                                                <label for="tres">3 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(4, this)" id="quatro" class="check"
+                                                    type="checkbox" />
+                                                <label for="quatro">4 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(5, this)" id="cinco" class="check"
+                                                    type="checkbox" />
+                                                <label for="cinco">5 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(6, this)" id="seis" class="check"
+                                                    type="checkbox" />
+                                                <label for="seis">6 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(7, this)" id="noveM" class="check"
+                                                    type="checkbox" />
+                                                <label for="noveM">9 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(8, this)" id="doze" class="check"
+                                                    type="checkbox" />
+                                                <label for="doze">12 meses</label>
+                                            </li>
+                                        </a>
+                                    </ul>
+
+                                    <p>CRIANÇA</p>
+
+                                    <ul class="options-checkbox">
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(9, this)" id="quinze" class="check"
+                                                    type="checkbox" />
+                                                <label for="quinze">15 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(10, this)" id="dezoito" class="check"
+                                                    type="checkbox" />
+                                                <label for="dezoito">18 meses</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(11, this)" id="quatroA" class="check"
+                                                    type="checkbox" />
+                                                <label for="quatroA">4 anos</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(12, this)" id="cincoA" class="check"
+                                                    type="checkbox" />
+                                                <label for="cincoA">5 anos</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(13, this)" id="nove" class="check"
+                                                    type="checkbox" />
+                                                <label for="nove">9 anos</label>
+                                            </li>
+                                        </a>
+                                    </ul>
+
+                                    <p>ADOLESCENTE</p>
+
+                                    <ul class="options-checkbox">
+                                        <!-- <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(14, this)" id="onze" class="check"
+                                                    type="checkbox" />
+                                                <label for="onze">11 anos</label>
+                                            </li>
+                                        </a> -->
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(15, this)" id="dezenove" class="check"
+                                                    type="checkbox" />
+                                                <label for="dezenove">11 à 19 anos</label>
+                                            </li>
+                                        </a>
+                                    </ul>
+
+                                    <p>ADULTO</p>
+
+                                    <ul class="options-checkbox">
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(16, this)" id="adulto" class="check"
+                                                    type="checkbox" />
+                                                <label for="adulto">20 à 59 anos</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(18, this)" id="idoso" class="check"
+                                                    type="checkbox" />
+                                                <label for="idoso">+ 60 anos</label>
+                                            </li>
+                                        </a>
+
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(17, this)" id="gestante" class="check"
+                                                    type="checkbox" />
+                                                <label for="gestante">Gestantes</label>
+                                            </li>
+                                        </a>
+                                    </ul>
+
+                                    <ul class="options-checkbox todas-vacinas">
+                                        <a>
+                                            <li>
+                                                <input onclick="filtrarVacinas(22, this)" id="vacinas" type="checkbox"
+                                                    checked />
+                                                <label for="vacinas">TODAS AS VACINAS</label>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="container-body">
+                    <div class="servicos-encontrados">Serviços Encontrados</div>
+                    <div id="lhCardWrapper" class="lhCardContainerCard submenuContainer"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <section class="container-sobre-vacinas">
+    <div>
+        <img class="img-sobre-vacinas" src="../assets/images/vacinas-disponiveis/mulher_e_crianca.jfif"
+            alt="Mulher e criança com máscaras.">
+    </div>
+    <div>
+        <h2>Sobre Vacinas</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi, dolor eius quam vero
+            voluptatibus obcaecati porro laboriosam amet placeat eveniet nulla ex consectetur aspernatur reprehenderit
+            minus saepe tempore totam.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consectetur, reiciendis eaque iusto, ea
+            corporis assumenda sed, in necessitatibus ducimus quaerat recusandae dolorem itaque magni accusantium
+            reprehenderit cupiditate perspiciatis et.
+        </p>
+    </div>
+</section> -->
+
+<script src="../assets/scripts/produtosVacinas.js"></script>
+
+<!-- Base -->
+<script src="../assets/scripts/lib/cards.js"></script>
+
+<script>
+
+    const cardsContainer = document.getElementById("lhCardWrapper");
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        todasVacinas();
+    });
+
+    //pega todas as vacinas
+    const todasVacinas = () => {
+        cardsContainer.innerHTML = "";
+
+        mountCards(produtosVacinas.itens, cardsContainer, produtosVacinas.categoria);
+    }
+
+    //array de seleção dos checkbox, inicia com 22 (todas as vacinas)
+    var lista = [22];
+
+    //filtra as vacinas de acordo com o array de seleção
+    const filtrarVacinas = (grupo, btn) => {
+
+        // Desmarca o 22 inicial quando algum outro é marcado e remove o 22 do array
+        if (grupo != 22) {
+            document.getElementById("vacinas").checked = false;
+
+            var index = lista.indexOf(22);
+            if (index !== -1) {
+                lista.splice(index, 1);
+            }
+
+        } else {
+            var opcaoIdades = document.getElementsByClassName("check");
+            for (var i = 0; i < opcaoIdades.length; i++) {
+                opcaoIdades[i].checked = false;
+            }
+            lista.length = 0;
+        }
+
+        // Coloca os elementos marcados dentro do array
+        if (btn.checked === true) {
+            lista.push(grupo);
+        } else {
+            for (var i = 0; i < lista.length; i++) {
+                if (lista[i] === grupo) {
+                    lista.splice(i, 1);
+                }
+            }
+        }
+
+        const vacinasFiltradas = (query) => {
+            return produtosVacinas.itens.filter((el) => {
+                return el.grupo.includes(query);
+            });
+        }
+
+        cardsContainer.innerHTML = "";
+
+        //Monta os cards de acordo com o array de seleção
+        for (var i = 0; i < lista.length; i++) {
+            mountCards(vacinasFiltradas(lista[i]), cardsContainer, produtosVacinas.categoria);
+        }
+
+        var listed = document.getElementsByClassName('nomeVacina');
+
+        for (var i = 0; i < listed.length; i++) {
+            console.log("teste", listed[i].innerText);
+        }
+
+        console.log("lista", lista);
+
+        var btnList = document.querySelectorAll('ul > a');
+        var menuBtnList = btn.parentElement.querySelectorAll('a');
+
+    }
+
+    const setHREF = () => {
+        var filterMenu = document.querySelectorAll('div.menuInternoCards ul > a');
+
+        for (link of filterMenu) {
+            link.href = "#vacinas-disponiveis-panvel";
+        }
+    }
+
+    const mobileFilterExpand = (btn) => {
+
+        var hiddenMenu = btn.nextElementSibling
+
+        if (hiddenMenu.classList.contains('active'))
+            hiddenMenu.classList.remove('active');
+        else {
+            var mobileMenuList = document.querySelectorAll('.menuInternoCards-mobile > ul');
+
+            for (expandedMenu of mobileMenuList) {
+                if (expandedMenu.classList.contains('active'))
+                    expandedMenu.classList.remove('active');
+            }
+
+            hiddenMenu.classList.add('active');
+            btn.style.color = 'rgb(13, 35, 97);';
+        }
+
+        window.location = "#vacinas-disponiveis-panvel";
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,103 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/base.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/container.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/text.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/button.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/accordeon.css" type="text/css">
+
+    <title>Atendimento Farmacêutico - Panvel Clinic</title>
+
+</head>
+
+<div class="LHWrapperBody">
+    <div class="hoverContent">
+        <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover" target="_blank" rel="noopener">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png" alt="ÍconeWhatsApp">
+        </a>
+    </div>
+    <div class="content-header LHHeaderInfo vacinas-menu-header" id="LHInfoHeader">
+        <div class="top-banner">
+            <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png" class="clinic-logo">
+          </div>
+          <div class="header-banner">
+            <div class="partner-info">
+              <div class="name-info">
+                <h1 class="headerTitle"> </h1>
+                <div class="headerDescription" id='LHtestedesc'>
+                </div>
+              </div>
+              <a class="produtoButton produtoCompra hidden" id="btnCompra"> COMPRAR  <i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+            </div>
+          </div>
+    </div>
+    <section class="primaryContent">
+        <div class="LHContainer">
+            <div class="inner-content default-content">
+                <div id="tab-content-wrapper">
+                    <ul class="accordeon-list">
+                        <li class="accordeon-item active" onclick="handleAccordeonClick(this);">
+                            <h3> Pra quem é indicado? </h3>
+                            <div class="accordeon-content">
+                                <p id='LH-atendimento-indicado'></p>
+                            </div>
+                        </li>
+                        <li class="accordeon-item active" onclick="handleAccordeonClick(this);">
+                            <h3> Como é o serviço? </h3>
+                            <div class="accordeon-content">
+                                <p id='LH-atendimento-servico'></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+<script>
+
+
+</script>
+
+<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/produtosAtendimentosFarmaceuticos.js"></script>
+<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/accordeon.js"></script>
+<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/parametros.js"></script>
+<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/filiaisHandler.js"></script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        if (window.location.search != "") {
+            preencherDados(getParameters());
+        }
+        initClinicModals();
+        handleFiliais();
+    });
+
+
+    const atendimentosDiv = (atendimento) => {
+        document.querySelector('h1.headerTitle').innerHTML = atendimento.nome;
+        document.querySelector('#LH-atendimento-indicado').innerHTML = atendimento.indicado;
+        document.querySelector('#LH-atendimento-servico').innerHTML = atendimento.servico;
+
+    };
+
+
+    function preencherDados(param) {
+
+        if (param.hasOwnProperty('i')) {
+            const atendimentoId = produtosAtendimentosFarmaceuticos.itens.find(atendimento => atendimento.id === parseInt(param.i));
+
+            atendimentosDiv(atendimentoId);
+        }
+
+    }
+</script>
+
+</html>

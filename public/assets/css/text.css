@@ -1,0 +1,21 @@
+.LHWrapperBody h1 {
+    font-weight: bold;
+}
+
+.LHWrapperBody h2 {
+    font-family: 'Graphik-Semibold';
+    font-size: 18px;
+    color: var(--azul-escuro-padrao);
+    letter-spacing: -0.02em;
+}
+
+.LHWrapperBody h3 {
+    font-family: 'Graphik';
+    font-size: 15px;
+    font-weight: bold;
+
+    color: var(--branco);
+    letter-spacing: -0.02em;
+}
+
+

@@ -1,0 +1,52 @@
+:root {
+    --azul-escuro-padrao: rgba(20, 60, 141, 1);
+    --azul-claro-destaque: rgba(79, 192, 224, 1);
+    --azul-claro-destaque-v2: rgba(84, 185, 221, 1);
+    --verde-botoes: rgba(101, 164, 139, 1);
+    --laranja-padrao: rgba(250, 157, 26, 1);
+    --branco: rgba(255, 255, 255, 1);
+    --fonte-familia-padrao: foco, Open Sans, sans-serif;
+    --margem-conteúdo-topo: 15px;
+    --margem-modal-topo: 70px;
+    --tamanho-maximo-modal: 80vh;
+    --header-desktop: 46px;
+    --header-mobile: 36px;
+    --header-slider-geral: 18px;
+
+    /* Antigas */
+    --color-orange-title: #ff9c16;
+    --color-lightblue: #00bcde;
+    --color-blue: #0a3383;
+    --color-white-gray: #E4E9F2;
+    --color-white: #fefefe;
+    --color-gray: #9e9e9e;
+    --color-gray-dark: #757575;
+    --color-background-dimgray: #696969;
+    --color-yale-blue: #1d3780;
+    --color-yale-blue-disabled: rgba(29, 55, 128, 0.20);
+    --color-st-patrick-blue: #243f8c;
+    --color-medium-turquoise: #4fc0e0;
+    --color-medium-turquoise-10: rgba(80, 190, 224, 0.3);
+    --color-acqua: #4BAC89;
+    --boxShadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12);
+    /* padronização das medidas utilizadas */
+    --xxsSpace: 0.3em;
+    --xsSpace: 0.5em;
+    --smSpace: 0.8em;
+    --mdSpace: 1em;
+    --lgSpace: 1.5em;
+    --xlSpace: 2em;
+    --xxlSpace: 3.5em;
+    /* tamanhos para fontes (precisamos definir) */
+    --xxxsFontSize: 0.7em;
+    --xxsFontSize: 0.8em;
+    --xsFontSize: 1em;
+    --smFontSize: 1.17em;
+    --mdFontSize: 1.5em;
+    --lgFontSize: 2em;
+    --xlFontSize: 3em;
+    --pSize: var(--xsFontSize);
+    --h1Size: var(--lgFontSize);
+    --h2Size: var(--mdFontSize);
+    --h3Size: var(--smFontSize);
+}

@@ -1,0 +1,192 @@
+@media screen and (min-width: 768px) {
+    #LHInfoHeader {
+        height: 444px;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #LHInfoHeader {
+        min-height: 311px;
+        max-height: max-content;
+    }
+}
+
+
+.LHWrapperBody .LHHeaderInfo {
+    top: 60px;
+}
+
+.LHWrapperBody div.LHHeaderInfo,
+#LHTesteInfo.content-header {
+    /* background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/modal-banner.png); */
+    background-size: cover;
+    height: auto;
+    padding: 31px 94px 30px;
+    position: relative;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.20);
+    font-family: var(--fonte-familia-padrao);
+    font-style: italic;
+}
+
+.LHWrapperBody div.LHHeaderInfo .clinic-logo {
+    height: 89px;
+    width: max-content;
+    display: block;
+}
+
+/* Botão de voltar */
+.innerHeader button.btnVoltar,
+button.btnVoltar {
+    height: 36px;
+    width: 128px;
+    background-color: transparent;
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid var(--branco);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .LHWrapperBody div.LHHeaderInfo {
+        background-position: center;
+        height: max-content;
+        padding: 10px 20px 50px;
+    }
+
+    div.innerHeader a {
+        height: 36px;
+    }
+
+    .innerHeader a {
+        margin-bottom: 20px;
+    }
+}
+
+.LHWrapperBody div.LHHeaderInfo div.innerHeader {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    margin-bottom: 85px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .LHWrapperBody div.LHHeaderInfo div.innerHeader {
+        flex-direction: column;
+
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.LHWrapperBody div.LHHeaderInfo .innerInfo {
+    display: flex;
+    align-items: center;
+}
+
+div.LHHeaderInfo .headerTitle {
+    font-size: 46px;
+    color: var(--azul-escuro-padrao);
+    margin-bottom: 11px;
+}
+
+
+div.LHHeaderInfo .headerDescription {
+    width: 100%;
+    max-width: 1049px;
+    font-size: 20px;
+    color: var(--azul-escuro-padrao);
+    line-height: 26px;
+
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    div.LHHeaderInfo .headerTitle {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    div.LHHeaderInfo .headerDescription {
+        font-size: 18px;
+    }
+}
+
+/* Imagens pra cada header */
+#LHInfoHeader.vacinas-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/Banners/1756-Interna-1025x444.png);
+}
+
+#LHInfoHeader.vacinas-menu-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/Banners/1756-Geral-1345x448.png);
+    top: 0;
+}
+
+#LHInfoHeader.covid-menu-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-covid/Banners/Banners-site-Covid.png);
+}
+
+#LHInfoHeader.covid-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-covid/Banners/Banner-site-Covid-2.png);
+}
+
+#LHInfoHeader.dengue-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-dengue/Banners/dengue.png);
+}
+
+#LHInfoHeader.teste-header {
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-geneticos/Banners/banner-interno.png);
+}
+
+div.top-banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.top-banner>a {
+    margin-left: auto;
+}
+
+.content-header .clinic-logo {
+    margin-bottom: 40px;
+    height: 65px;
+    width: 160px;
+
+    margin-right: 20px;
+}
+
+.header-banner .page-title {
+    font-family: foco, Open Sans, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 46px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 11px;
+}
+
+div.partner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.page-desc {
+    width: 100%;
+    max-width: 1049px;
+    font-family: 'Foco';
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 26px;
+}
+
+div.name-info {
+    max-width: 802px;
+}

@@ -1,0 +1,403 @@
+/* ASSISTENTE VIRTUAL */
+li.bt-abrir-assistVirtual,
+div.bt-abrir-assistVirtual {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 45px;
+    margin: 0 auto;
+
+    background-color: rgba(250, 157, 26, 1);
+    border-radius: 8px;
+
+}
+
+/* .bt-abrir-assistVirtual img {
+    width: auto;
+    height: 50px;
+    padding: unset;
+    margin: unset;
+    line-height: 0;
+    margin-left: 10px;
+} */
+
+
+li.bt-abrir-assistVirtual p,
+div.bt-abrir-assistVirtual p {
+    margin: unset;
+}
+
+@media screen and (max-width:600px) {
+
+    li.bt-abrir-assistVirtual,
+    div.bt-abrir-assistVirtual {
+        font-size: 32px;
+    }
+}
+
+.assistVirtualModal *,
+.assistVirtualModal h2.question {
+    color: var(--branco)
+}
+
+#btCloseModal {
+    position: absolute;
+    top: var(--xsSpace);
+    right: var(--xsSpace);
+    cursor: pointer;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+#btCloseModal:before {
+    content: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/modal/close.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#btCloseModal:hover:before {
+    opacity: 0.5;
+}
+
+#btCloseModal:hover,
+#btCloseModal:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+#LHModalQuest {
+    flex: 0.9;
+    flex-direction: column;
+    margin: 2%;
+    height: 100%;
+    width: auto;
+    max-width: 1080px;
+    padding: 0;
+    z-index: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #fefefe;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: var(--xxlSpace);
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    z-index: 9999;
+    margin-top: calc(2%);
+    /*margin-top: calc(62px + 2%);*/
+}
+
+.modal-assistente-virtual-demo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.assistVirtualContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.assistVirtualModal #LHModalQuest {
+    background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/modal_bg.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.assistVirtualModal * {
+    color: var(--color-white);
+}
+
+.assistVirtualModal #modalHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: var(--xlSpace);
+}
+
+.assistVirtualModal #modalHeader svg {
+    transform: scaleY(0);
+    transition: all 1s ease-in-out;
+}
+
+#modalHeader::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--color-orange-title);
+    transition: all 1s ease-in-out;
+}
+
+#modalHeader.assistantStarted::after {
+    width: calc(100% - var(--xlSpace) * 2);
+}
+
+#modalHeader #logoModalMain {
+    transform: scaleY(1);
+    position: relative;
+    top: 0;
+    width: 160px;
+}
+
+#modalHeader #logoModalLeft {
+    left: var(--xlSpace);
+}
+
+#modalHeader #logoModalRight {
+    right: var(--xlSpace);
+}
+
+#modalHeader #logoModalLeft,
+#modalHeader #logoModalRight {
+    position: absolute;
+    opacity: 0;
+    top: -100%;
+}
+
+#modalHeader.assistantStarted #logoModalRight {
+    top: var(--xlSpace);
+}
+
+#modalHeader.assistantStarted #logoModalLeft {
+    top: var(--lgSpace);
+}
+
+#modalHeader.assistantStarted #logoModalLeft,
+#modalHeader.assistantStarted #logoModalRight {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+#modalHeader.assistantStarted #logoModalMain {
+    top: -100px;
+    opacity: 0;
+}
+
+[id^="assistVirtual-wrapper-"] {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    padding: var(--lgSpace) var(--mdSpace);
+    position: absolute;
+    top: 12%;
+    left: 100%;
+    opacity: 0;
+}
+
+[id^="assistVirtual-wrapper-"] .options {
+    display: flex;
+    margin-top: var(--xxlSpace);
+    justify-content: space-around;
+}
+
+[id^="assistVirtual-wrapper-"] button {
+    margin-bottom: var(--mdSpace);
+}
+
+[id^="assistVirtual-wrapper-"].active {
+    left: 0;
+    opacity: 1;
+    transition: left 1.5s ease-in-out, opacity 1.5s;
+}
+
+[id^="assistVirtual-wrapper-"].completed {
+    left: -100%;
+    opacity: 0;
+    transition: left 1.5s ease-in-out, opacity 0.5s;
+}
+
+[id^="assistVirtual-wrapper-"] h2 {
+    margin-top: 10%;
+    margin-bottom: var(--xxsSpace);
+    font-size: var(--lgFontSize);
+    color: var(--branco);
+}
+
+[id^="assistVirtual-wrapper-"] h3 {
+    margin: 0;
+    font-size: var(--h2Size);
+}
+
+[id^="assistVirtual-wrapper-"] a {
+    font-size: var(--mdFontSize);
+}
+
+[id^="assistVirtual-wrapper-"] button.questOption {
+    border: none;
+    outline: none;
+    font-size: var(--smFontSize);
+    padding: var(--mdSpace) var(--mdSpace);
+    min-width: 35%;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+[id^="assistVirtual-wrapper-"] button.active {
+    background-color: var(--color-white);
+}
+
+[id^="assistVirtual-wrapper-"] .note {
+    font-size: var(--smFontSize);
+    font-weight: 700;
+    font-style: italic;
+    margin-top: var(--mdSpace);
+}
+
+[id^="assistVirtual-wrapper-"] .note+.recommended-exam {
+    margin-top: var(--mdSpace);
+}
+
+[id^="assistVirtual-wrapper-"] .recommended-exam+.options,
+[id^="assistVirtual-wrapper-"] .note+.options {
+    margin-top: var(--xlSpace);
+}
+
+[id^="assistVirtual-wrapper-"] .bt-agendar-vacina {
+    background: var(--color-acqua);
+}
+
+[id^="assistVirtual-wrapper-"] .recommended-exam {
+    font-size: var(--mdFontSize);
+    font-weight: 700;
+    font-style: italic;
+    border: 1px solid var(--color-orange-title);
+    max-width: 80%;
+    margin: var(--mdSpace) auto 0;
+    padding: var(--mdSpace);
+    border-radius: 8px;
+}
+
+[id^="assistVirtual-wrapper-"] .recommended-exam p+p {
+    margin-top: var(--xsSpace);
+}
+
+[id^="assistVirtual-wrapper-"] .recommended-exam span {
+    display: block;
+    font-size: var(--smFontSize);
+    color: var(--color-yale-blue);
+    margin: var(--xsSpace) 0;
+}
+
+/* [id^="assistVirtual-wrapper-"] button.btn-teste-comprar {
+    background-color: green;
+} */
+
+@media screen and (max-width: 768px) {
+    .assistVirtualModal #LHModalQuest {
+        overflow-y: auto;
+        padding-top: unset;
+    }
+
+    #modalHeader.assistantStarted #logoModalMain {
+        display: none;
+    }
+
+    #modalHeader::after {
+        display: none;
+    }
+
+    .assistVirtualModal #modalHeader {
+        position: relative;
+    }
+
+    #modalHeader.assistantStarted #logoModalLeft,
+    #modalHeader.assistantStarted #logoModalRight {
+        position: static;
+        margin: 0 20px;
+    }
+
+    .assistVirtualModal #modalHeader.assistantStarted {
+        flex-wrap: wrap;
+    }
+
+    #LHModalContent,
+    .assistVirtualModa {
+        overflow: unset;
+    }
+
+    [id^="assistVirtual-wrapper-"]:not(.active) {
+        width: unset;
+        padding: unset;
+    }
+
+    div.bt-abrir-assistVirtual {
+        margin: unset;
+    }
+}
+
+@media screen and (max-width:540px) {
+    [id^="assistVirtual-wrapper-"] .options {
+        flex-wrap: wrap;
+    }
+}
+
+button.btn-teste-comprar {
+    width: max-content;
+    padding: 20px;
+    height: 55px;
+    margin: auto;
+    margin-bottom: auto;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(75, 172, 137, 1);
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+button.buttonQuest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-orange-title);
+    color: var(--color-white);
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: var(--pFontSize);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: fit-content;
+    width: -moz-fit-content;
+    letter-spacing: 1px;
+}

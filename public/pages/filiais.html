@@ -1,0 +1,545 @@
+<html>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  @import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/fonts.css);
+
+  .card-tutorial,
+  .card-security,
+  .card-vacinas,
+  .card-header-detalhe,
+  .card-detalhe,
+  .card-header-calendario,
+  .card-calendario,
+  .card-faixa,
+  .card-seleciona-faixa,
+  .vacina-calendario {
+    border-radius: 12px;
+    margin: 24px 0;
+  }
+
+  /* Formulário de pesquisa */
+
+  .card-form {
+    border-radius: 8px;
+    font-family: Foco, Open Sans, sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #757575;
+    ;
+    line-height: 26px;
+    width: 100%;
+  }
+
+  .card-form .card-header {
+    text-align: center;
+  }
+
+  .card-form .card-header .card-title {
+    margin: 48 20px 30px;
+  }
+
+  .card-form .card-header .card-desc {
+    padding: 15px;
+    margin: 0 auto;
+    font-family: Foco, Open Sans, sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    line-height: 19px;
+  }
+
+  .card-form .form-container {
+    margin-top: 25px;
+  }
+
+  .form-container .dropdown-card {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .dropdown-card select {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 24px;
+    outline: none;
+    padding-left: 16px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #fafafa;
+    color: #757575;
+  }
+
+  .card-adress,
+  .card-nome {
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-nome {
+    text-transform: uppercase;
+  }
+
+  .card-adress span,
+  .card-end span {
+    margin-bottom: 3px;
+  }
+
+  .card-adress span:first-child,
+  .card-end span:first-child {
+    margin-bottom: 5px;
+  }
+
+  .card-end {
+    margin-left: 12px;
+    padding-bottom: 17px;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  #items-container {
+    overflow-y: auto;
+    max-height: 580px;
+    width: 100%;
+    border: 1px solid rgba(224, 224, 224, 1);
+    border-radius: 6px;
+    margin-bottom: 25px;
+  }
+
+  .text-dropwdown {
+    text-transform: uppercase;
+    font-family: Foco, Open Sans, sans-serif;
+    font-size: 16px;
+    color: rgba(158, 158, 158, 1);
+    letter-spacing: 0.01em;
+  }
+
+  .dropdown-card .button-div {
+    margin: 20px 0;
+  }
+
+  .card-tuto-header {
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1d3780;
+  }
+
+  h2 {
+    font-family: Foco, Open Sans, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(0, 57, 134, 1);
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+    line-height: 44px;
+  }
+
+  .card-tuto-header span {
+    font-family: Foco, Open Sans, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: -0.03em;
+  }
+
+  .card-tuto-header span p {
+    margin-top: unset;
+    font-family: Foco, Open Sans, sans-serif;
+  }
+
+  @media screen and (max-width:768px) {
+    .card-tutorial {
+      margin: 24px 6%;
+    }
+  }
+</style>
+<div class="pure-g">
+  <div class="pure-u-1">
+    <div class="card-tutorial">
+      <div class="card-form">
+        <div class="card-tuto-header">
+          <h2>
+            Sempre tem uma Panvel perto de você
+          </h2>
+          <span>
+            <p>Escolha a loja de sua preferência.</p>
+          </span>
+        </div>
+
+        <div class="form-container pure-u-1" id="form-filial">
+
+          <div class="dropdown-card">
+            <span class="text-dropwdown">Estado</span>
+            <div class="button-div">
+              <select name="select-estado" id="estado" onchange="onChangeStateNova(this)">
+              </select>
+            </div>
+
+            <span class="text-dropwdown">Cidade</span>
+            <div class="button-div">
+              <select name="select-cidade" id="cidade" onchange="onChangeCityNova(this)">
+              </select>
+            </div>
+
+            <span class="text-dropwdown">Bairro</span>
+            <div class="button-div">
+              <select name="select-bairro" id="bairro" onchange="onChangeDistrictNova(this)">
+              </select>
+            </div>
+
+            <div id="items-container">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/parametros.js"></script>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lojas.js"></script>
+<script>
+  window.addEventListener('load', LHevents);
+
+  lojas = [];
+
+  function LHevents() {
+
+    if (window.location.search != "") {
+      preencherDados(getParameters());
+    }
+
+    orderDataAlphabetically(lojas);
+
+    filtrarDadosPanvel(lojas);
+
+    createSelectionsNova();
+  }
+
+  function onChangeStateNova(sel) {
+
+    let citiesSelection = document.getElementById("cidade");
+    var L = citiesSelection.length;
+
+    for (i = L; i >= 0; i--) {
+      citiesSelection.remove(i);
+    }
+
+    let districtSelection = document.getElementById("bairro");
+    var L = districtSelection.length;
+
+    for (i = L; i >= 0; i--) {
+      districtSelection.remove(i);
+    }
+
+    let items = document.getElementById("items-container");
+    items.textContent = "";
+
+    let estate = sel.value;
+
+    getCitiesNova(estate);
+  }
+
+  function onChangeCityNova(sel) {
+
+    let districtSelection = document.getElementById("bairro");
+    var L = districtSelection.length;
+
+    for (i = L; i >= 0; i--) {
+      districtSelection.remove(i);
+    }
+
+    let items = document.getElementById("items-container");
+    items.textContent = "";
+
+    let city = sel;
+
+    getDistrictsNova(city);
+  }
+
+  function onChangeDistrictNova(sel) {
+
+    districtSelection = document.getElementById('bairro');
+
+    let items = document.getElementById("items-container");
+    items.textContent = "";
+
+    let district = sel;
+
+    getAdressesNova(district);
+  }
+
+  function createSelectionsNova() {
+
+    //seleciona select dos estados
+    let estateSelection = document.getElementById("estado");
+    estateSelection.length = 0;
+
+    //seleciona select das cidades
+    let citySelection = document.getElementById("cidade");
+    citySelection.length = 0;
+
+    //seleciona select dos bairros
+    let districtSelection = document.getElementById("bairro");
+    districtSelection.length = 0;
+
+    let option;
+
+    var lastEstate;
+
+    for (let i = 0; i < lojas.length; i++) {
+
+      if (i === 0) {
+        lastEstate = lojas[i].UF;
+
+        option = document.createElement("option");
+        option.text = lojas[i].Estado;
+        option.value = lojas[i].UF;
+        estateSelection.add(option);
+
+      } else {
+
+        if (lojas[i].UF !== lastEstate) {
+
+          let verifState = 1;
+
+          for (let j = 0; j < estateSelection.options.length; j++) {
+
+            if (lojas[i].UF === estateSelection.options[j].value) {
+              verifState = 0;
+            }
+          }
+
+          if (verifState !== 0) {
+            lastEstate = lojas[i].UF;
+            option = document.createElement("option");
+            option.text = lojas[i].Estado;
+            option.value = lojas[i].UF;
+            estateSelection.add(option);
+          }
+        }
+      }
+    }
+
+    //Envio do UF
+    getCitiesNova(estateSelection[0].value);
+
+  }
+
+  function getCitiesNova(sel) {
+
+    //Indices
+    let estate = sel;
+
+    citySelection = document.getElementById('cidade');
+
+    var lastCity;
+
+    for (let i = 0; i < lojas.length; i++) {
+
+      if (lojas[i].UF === sel) {
+
+        if (i === 0) {
+          lastCity = lojas[i].Cidade;
+
+          cityOption = document.createElement("option");
+          cityOption.text = lojas[i].Cidade;
+          cityOption.value = `${lojas[i].UF}%${lojas[i].Cidade}`;
+          cityOption.classList = `lista-cidades`;
+          citySelection.add(cityOption);
+
+        } else {
+
+          if (lojas[i].Cidade !== lastCity) {
+
+            let verifCity = 1;
+
+            for (let j = 0; j < citySelection.options.length; j++) {
+
+              if (lojas[i].Cidade === citySelection.options[j].innerHTML) {
+                verifCity = 0;
+              }
+            }
+
+            if (verifCity !== 0) {
+              lastCity = lojas[i].Cidade;
+
+              cityOption = document.createElement("option");
+              cityOption.text = lojas[i].Cidade;
+              cityOption.value = `${lojas[i].UF}%${lojas[i].Cidade}`;
+              cityOption.classList = `lista-cidades`;
+              citySelection.add(cityOption);
+            }
+          }
+        }
+      }
+    }
+
+    citySelection[0].selected = true;
+
+    //Envio completo pra puxar tanto estado quanto innertext
+    getDistrictsNova(citySelection[0]);
+
+  }
+
+  function getDistrictsNova(sel) {
+
+    var splits = sel.value.split("%", 2);
+    let estate = splits[0];
+    let city = splits[1];
+
+    var lastDistrict;
+
+    districtSelection = document.getElementById('bairro');
+
+    for (let i = 0; i < lojas.length; i++) {
+
+      if (lojas[i].UF === estate && lojas[i].Cidade === city) {
+
+        if (i === 0) {
+          lastDistrict = lojas[i].Bairro;
+
+          districtOption = document.createElement("option");
+          districtOption.text = lojas[i].Bairro;
+          districtOption.value = `${estate}%${city}%${lojas[i].Bairro}`;
+          districtOption.classList = `lista-bairros`;
+          districtSelection.add(districtOption);
+
+        } else {
+
+          if (lojas[i].Bairro !== lastDistrict) {
+
+            let verifDistrict = 1;
+
+            for (let j = 0; j < districtSelection.options.length; j++) {
+
+              if (lojas[i].Bairro === districtSelection.options[j].innerText) {
+                verifDistrict = 0;
+              }
+            }
+
+            if (verifDistrict !== 0) {
+              lastDistrict = lojas[i].Bairro;
+
+              districtOption = document.createElement("option");
+              districtOption.text = lojas[i].Bairro;
+              districtOption.value = `${estate}%${city}%${lojas[i].Bairro}`;
+              districtOption.classList = `lista-bairros`;
+              districtSelection.add(districtOption);
+            }
+          }
+        }
+      }
+
+    }
+
+    districtSelection[0].selected = true;
+
+    getAdressesNova(districtSelection[0]);
+  }
+
+  function getAdressesNova(sel) {
+
+    let items = document.getElementById("items-container");
+    items.textContent = "";
+
+    var splits = sel.value.split("%", 3);
+    let estate = splits[0];
+    let city = splits[1];
+    let district = splits[2];
+
+    for (let i = 0; i < lojas.length; i++) {
+
+      if (lojas[i].UF === estate && lojas[i].Cidade === city && lojas[i].Bairro === district) {
+        console.log(lojas[i]);
+
+        itemsContainer = document.getElementById("items-container");
+
+        let items = document.createElement("div");
+        items.classList = `items`;
+
+        let cardNome = document.createElement("div");
+        cardNome.className = "card-nome";
+
+        let nomeLabel = document.createElement("span");
+        nomeLabel.textContent = lojas[i].Bairro;
+
+        cardNome.appendChild(nomeLabel);
+
+        items.appendChild(cardNome);
+
+        let cardAdress = document.createElement("div");
+        cardAdress.className = "card-adress";
+
+        let endereco = document.createElement("span");
+        endereco.textContent = lojas[i].Endereço;
+        cardAdress.appendChild(endereco);
+
+        items.appendChild(cardAdress);
+
+        let cardTelefone = document.createElement("div");
+        cardTelefone.className = "card-adress";
+
+        let telefone = document.createElement("span");
+        telefone.innerText = ((typeof lojas[i].Telefone !== 'undefined') ? lojas[i].Telefone + ' \n ' : '') + ((typeof lojas[i].WhatsApp !== 'undefined') ? lojas[i].WhatsApp : '');;
+        cardTelefone.appendChild(telefone);
+
+        items.appendChild(cardTelefone);
+
+        let cardEnd = document.createElement("div");
+        cardEnd.className = "card-end";
+
+        let funcionamento = document.createElement("span");
+        funcionamento.innerText = (lojas[i].Úteis ? 'Segunda à sexta: ' + lojas[i].Úteis + '\n' : ' ') + (lojas[i].Sábados ? 'Sábados: ' + lojas[i].Sábados + '\n' : ' ') + (lojas[i].Feriados ? 'Domingos e feriados: ' + lojas[i].Feriados + '\n' : ' ')
+        cardEnd.appendChild(funcionamento);
+
+        items.appendChild(cardEnd);
+
+        itemsContainer.appendChild(items);
+
+      }
+
+    }
+
+  }
+
+  function preencherDados(param) {
+
+    if (param.hasOwnProperty('f')) {
+      const filiais = param.f;
+
+      switch (filiais) {
+        case 'vacinasPanvel':
+          lojas = filiaisVacinas;
+          break;
+        case 'gripePanvel':
+          lojas = filiaisGripe;
+          break;
+        case 'exameSaliva':
+          lojas = filiaisExameSaliva;
+          break;
+        case 'exameAnticorpos':
+          lojas = filiaisExameAnticorpos;
+          break;
+        case 'panvelCovid':
+          lojas = filiaisPanvelCovid;
+          break;
+        case 'iggIgm':
+          lojas = filiaisIggIgm;
+          break;
+        case 'rtPcr':
+          lojas = filiaisRtPcr;
+          break;
+        case 'rtPcrUrgente':
+          lojas = filiaisRtPcrUrgente;
+          break;
+      }
+    }
+
+  }
+</script>
+
+</html>

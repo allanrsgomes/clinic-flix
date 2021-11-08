@@ -1,0 +1,98 @@
+/*
+container-card-list -> lhCardContainerCard
+vacina-cards-wrapper -> lhCardContainerCard
+#vacinas-cards-container .cartao -> .lhDefaultCard.lhCardImage
+cartao -> lhDefaultCard
+*/
+
+.lhCardContainerCard,
+#lhCardWrapper.lhCardContainerCard {
+    width: 100%;
+    margin: 30 0 0 30px;
+    margin-top: 30px;
+    /* justify-content: flex-start;
+    margin-left: unset;
+    margin-top: unset; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+}
+
+
+.lhCardContainerCard>a,
+#lhCardWrapper.lhCardContainerCard>a {
+    text-decoration: none;
+    margin: 10px auto;
+}
+
+.lhCardContainerCard.submenuContainer {
+    margin-top: 76px;
+
+}
+
+/* Cartão padrão */
+
+.lhDefaultCard,
+#lhCardWrapper.lhCardContainerCard .lhDefaultCard {
+    display: flex;
+
+    align-items: center;
+    justify-content: left;
+    height: 135px;
+    width: 240px;
+    border-radius: 8px;
+
+    background-color: rgba(36, 63, 140, 1);
+    background-size: cover;
+
+    background-size: cover;
+}
+
+.lhDefaultCard h3,
+#lhCardWrapper.lhCardContainerCard .lhDefaultCard h3 {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+
+    color: var(--branco);
+}
+
+
+/* Cartão ilustrado */
+.lhDefaultCard.lhCardImage {
+    width: 200px;
+    height: 200px;
+}
+
+.orange-title {
+    color: rgba(250, 157, 26, 1);
+    text-align: left;
+}
+
+/* Veio do Style */
+
+
+/* .wrapper-card-list {
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+} */
+
+
+@media screen and (max-width: 768px) {
+
+    .lhCardContainerCard,
+    #lhCardWrapper.lhCardContainerCard {
+        margin: unset;
+        margin-top: 15px;
+        justify-content: space-evenly;
+        padding-right: unset;
+    }
+
+    .lhCardContainerCard a,
+    #lhCardWrapper.lhCardContainerCard a {
+        /* margin: unset; */
+        margin-bottom: 15px;
+    }
+}

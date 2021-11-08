@@ -1,0 +1,64 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/base.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/container.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/menus.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/cards.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/text.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/modal.css" type="text/css">
+
+    <title>Combos Promocionais - Panvel Clinic</title>
+   
+</head>
+<div class="LHWrapperBody">
+    <div class="LHHeaderInfo vacinas-menu-header" id="LHInfoHeader">
+            <div class="innerHeader">
+                <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png" class="clinic-logo">
+            </div>
+            <h1 class="headerTitle"> Combos Promocionais </h1>
+            <div class="headerDescription">Adquirindo o medicamento junto com a aplicação você ganha desconto*.
+                <br /> <br />
+                *Desconto aplicado no carrinho.
+            </div>
+    </div>
+    <div class="LHContainer">
+        <div class="inner-content default-content">
+            <div id="tab-content-wrapper">
+                <div id="lhCardWrapper" class="lhCardContainerCard">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/produtosCombosPromocionais.js"></script>
+
+    <!-- Base -->
+    <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/cards.js"></script>
+
+
+    <script>
+        const cardsContainer = document.getElementById("lhCardWrapper");
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            todasVacinas();
+        });
+
+        const todasVacinas = () => {
+            cardsContainer.innerHTML = "";
+
+            mountCards(produtosCombosPromocionais.itens, cardsContainer);
+        }
+
+
+    </script>
+</div>
+
+</html>

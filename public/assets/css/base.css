@@ -1,0 +1,160 @@
+@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/variaveis.css);
+@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/fonts.css);
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/*Não enviar esse import quando for subir*/
+@import url(https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css);
+
+
+/* Tudo que não for o footer injetado na montagem da página */
+.LHWrapperBody :not(footer) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    letter-spacing: -0.03em;
+}
+
+.LHWrapperBody article,
+.LHWrapperBody aside,
+.LHWrapperBody details,
+.LHWrapperBody figcaption,
+.LHWrapperBody figure,
+.LHWrapperBody header,
+.LHWrapperBody hgroup,
+.LHWrapperBody menu,
+.LHWrapperBody nav,
+.LHWrapperBody section {
+    display: block;
+}
+
+.LHWrapperBody body {
+    line-height: 1;
+}
+
+.LHWrapperBody ol,
+.LHWrapperBody ul {
+    list-style: none;
+}
+
+.LHWrapperBody a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.LHWrapperBody img {
+    width: inherit;
+}
+
+/* Definições base */
+.LHWrapperBody {
+    /* background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/background-default.png); */
+    background-repeat: round;
+    background-size: contain;
+    padding: 0;
+    background-color: #F1F1F1;
+    color: rgba(255, 255, 255, 1);
+}
+
+.LHWrapperBody div.LHContainer {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto 0;
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hide-mob {
+        display: none;
+    }
+
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* Textos */
+
+h2 {
+    font-family: 'Graphik-Semibold';
+    font-size: 18px;
+    color: var(--azul-escuro-padrao);
+    letter-spacing: -0.02em;
+}
+
+.menuInternoCards-desktop ul a li,
+.menuInternoCards-mobile ul a li {
+    color: #143c8d;
+}
+
+@media screen and (max-width: 48em) {
+    h1.page-title {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/* Resets específicos */
+button {
+    font-family: var(--fonte-familia-padrao);
+    font-weight: bold;
+    line-height: 0;
+    cursor: pointer;
+    border: unset;
+}
+
+
+/* Conteúdo interno de páginas de conteúdo */
+
+hr.blue-separator {
+    height: 1px;
+    background-color: var(--azul-escuro-padrao);
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    margin: 37px auto;
+}
+
+hr.orange-separator {
+    height: 1px;
+    width: 172px;
+    background-color: rgba(250, 157, 26, 1);
+    border: none;
+    margin: 16px 0;
+}
+
+.buy-content a.button {
+    font-family: var(--fonte-familia-padrao);
+    font-weight: bold;
+}
+
+div.hoverContent .button.fixedHover {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+}
+
+div.hoverContent .button {
+    cursor: pointer;
+    filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.52));
+}
+
+div.hoverContent .button.fixedHover img {
+    max-width: 60px;
+}
+
+section.primaryContent {
+    float: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}

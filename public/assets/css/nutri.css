@@ -1,0 +1,208 @@
+/* Icon row */
+
+.icon-row {
+align-items: center;
+display: flex;
+}
+
+.icon-row:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.first-col .icon-row {
+padding-left: 0;
+}
+
+section .icon-row:not(:last-child).icon-large {
+margin-bottom: 50px;
+}
+
+section.card.accordeon-content {
+    background-color: transparent;
+}
+
+.icon-row>* {
+margin: 0;
+}
+
+section .icon-large img {
+width: 130px;
+margin-right: 30px;
+}
+
+section .icon-large h3 {
+color: #143c8d;
+font-weight: 600;
+
+font-size: 21px;
+font-style: italic;
+margin-bottom: 0;
+margin-top: 20px;
+}
+
+section .icon-large h3+p {
+margin-top: 0;
+}
+
+section .icon-row:not(:last-child).icon-small {
+margin-bottom: 20px;
+}
+
+section .icon-small img {
+width: 70px;
+margin-right: 10px;
+}
+
+li.ative .center-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+/* Progress bar elements */
+
+.progress-bar-wrapper {
+width: 100%;
+}
+
+.progressbars-container {
+display: flex;
+padding: 0 60px;
+align-self: stretch;
+}
+
+.section-content .progressbars-container {
+padding: 0;
+}
+
+.progressbars-container>.pure-u-md-1-3 {
+max-width: 30%;
+}
+
+.pure-u-md-1-3 .icon-row img {
+width: 70px;
+margin-right: 10px;
+}
+
+.pure-u-md-1-3>div {
+flex: 0.33;
+}
+
+.pure-u-md-1-3 h5 {
+font-size: 14px;
+}
+
+.pure-u-md-1-3 .progress-bar,
+.pure-u-md-1-3 .progress-bar>div {
+height: 26px;
+border: 1px solid #1d3780;
+border-radius: 13px;
+overflow: hidden;
+position: relative;
+}
+
+.pure-u-md-1-3 .progress-bar>div {
+position: absolute;
+top: -1px;
+left: -1px;
+background-color: #1d3780;
+border: none;
+border-radius: 0 14px 14px 0;
+}
+
+.pure-u-md-1-3 .progress-with-text {
+height: auto;
+background-color: #1d3780;
+color: var(--yale-blue);
+padding: 20px;
+font-weight: 700;
+letter-spacing: 0;
+}
+
+.progress-10 {
+width: 10%;
+}
+
+.progress-20 {
+width: 20%;
+}
+
+.progress-30 {
+width: 30%;
+}
+
+.progress-40 {
+width: 40%;
+}
+
+.progress-50 {
+width: 50%;
+}
+
+.progress-60 {
+width: 60%;
+}
+
+.progress-70 {
+width: 70%;
+}
+
+.progress-75 {
+width: 75%;
+}
+
+.progress-80 {
+width: 80%;
+}
+
+.progress-90 {
+width: 90%;
+}
+
+.progress-100 {
+width: 100%;
+}
+
+/* End Progress Bar Elements */
+
+section .icon-image {
+background-color: var(--color-background-blue);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+section .icon-image img {
+height: 80%;
+max-width: 376px;
+}
+
+iframe#card-video {
+width: 100%;
+min-height: 486px;
+border: none;
+}
+
+#modalParceiro {
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+#modalParceiroWrapper {
+width: 90vh;
+height: 80vh;
+border: none;
+overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Testes Geneticos */
+    .progressbars-container {
+        padding: unset;
+    }
+
+}

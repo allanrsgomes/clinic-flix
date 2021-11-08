@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://widget.simplybook.me/v2/widget/widget.js"></script>
+  <script src="../assets/scripts/lib/simplyBookHandler.js"></script>
+  <!--Add o simplybook handler-->
+</head>
+
+<div>
+  <script type="text/javascript">
+
+    const queryString = window.location.search; // Pega as propriedades da URL
+
+    const urlParams = new URLSearchParams(queryString); // Trata as propriedades    / adequação
+
+    var simplyBookHandler = new SimplyBookHandler("https:\/\/grupodimed.simplybook.plus", urlParams);
+
+    //Montagem e uso do widget
+    var widget = simplyBookHandler.simplyBookWidget;
+
+  </script>
+
+</div>
+
+</html>

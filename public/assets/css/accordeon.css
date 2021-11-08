@@ -1,0 +1,134 @@
+/* Accordeon */
+
+/* ACCORDEON LIST */
+
+.accordeon-list {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 60px !important;
+    width: 100%;
+}
+
+.accordeon-item {
+    height: 45px;
+    padding-left: 40px;
+    box-shadow: none;
+    transition: box-shadow 0.5s ease-in-out;
+    background-color: transparent;
+}
+
+.accordeon-item:not(.active) .accordeon-content {
+    display: none;
+}
+
+.accordeon-item:not(:last-child) {
+    margin-bottom: 43px;
+}
+
+.accordeon-item.active {
+    margin-bottom: unset;
+    height: max-content;
+    color: #0a3383;
+}
+
+.accordeon-item.active section {
+    display: block;
+    height: max-content;
+    margin-bottom: 20px;
+}
+
+.accordeon-item>h3 {
+    font-family: var(--fonte-familia-padrao);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--azul-escuro-padrao);
+    position: relative;
+    margin: unset;
+    margin-bottom: 0;
+    padding-right: 40px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.accordeon-item>div.accordeon-content {
+    height: 0;
+    opacity: 0;
+    margin-top: 0;
+    padding-right: 30px;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(0, 57, 134, 1);
+}
+
+.accordeon-item.active>div.accordeon-content {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: max-content;
+    opacity: 1;
+    margin-bottom: 60px;
+}
+
+/* seta do accordeon */
+
+.accordeon-item>h3::before {
+    content: "+";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    left: calc(20px*-2);
+    font-size: 24px;
+    font-style: normal;
+    color: rgba(250, 157, 26, 1);
+    border: 4px solid rgba(250, 157, 26, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordeon-item.active>h3::before {
+    content: "-";
+}
+
+@media screen and (max-width: 768px) {
+    .accordeon-item>div.accordeon-content {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .accordeon-item>h3 {
+        font-size: 20px;
+    }
+}
+
+.card>.accordeon-content section,
+.card>.accordeon-content {
+    margin: 20px 0;
+}
+
+.accordeon-content .pure-g {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.accordeon-content .pure-g .progress-bar-wrapper .progress-bar {
+    height: 26px;
+    border: 1px solid var(--azul-escuro-padrao);
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+.accordeon-content .pure-g .progress-bar-wrapper .progress-bar div {
+    height: 26px;
+    background-color: var(--azul-escuro-padrao);
+}
+
+.accordeon-content .pure-g .progress-bar-wrapper .progress-bar.progress-with-text {
+    height: auto;
+    background-color: var(--azul-escuro-padrao);
+    color: white;
+    padding: 20px;
+}

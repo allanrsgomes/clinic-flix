@@ -1,0 +1,227 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/css/base.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/container.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/text.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/button.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/accordeon.css" type="text/css">
+
+    <link rel="stylesheet" href="../assets/css/modal.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/agendamento.css" type="text/css">
+
+    <title>Vacina - Panvel Clinic</title>
+
+    <!-- <script>
+        //Verifica se tem o parâmetro do produto definido, caso não tenha entra no if
+        if (window.location.search == "") {
+
+            //Redireciona para página de listagem de COVID
+            window.location.href = "/panvel/testes-covid.do";
+        }
+    </script> -->
+</head>
+
+<div class="LHWrapperBody">
+    <div class="hoverContent">
+        <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
+            target="_blank" rel="noopener">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
+                alt="ÍconeWhatsApp">
+        </a>
+    </div>
+    <div class="content-header LHHeaderInfo vacinas-header" id="LHInfoHeader">
+        <div class="top-banner">
+            <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png"
+                class="clinic-logo">
+        </div>
+        <div class="header-banner">
+            <div class="partner-info">
+                <div class="name-info">
+                    <h1 class="headerTitle"> </h1>
+                    <div class="headerDescription" id='LHProdutoDesc'>
+                    </div>
+                </div>
+                <a class="produtoButton produtoCompra" id="btnCompra"
+                    onclick="pushButton('clinicButtonComprar', 'Vacinas', 'Vacinas')"> COMPRAR <i
+                        class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <section class="primaryContent">
+        <div class="LHContainer">
+            <div class="inner-content default-content">
+                <div id="tab-content-wrapper">
+                    <div>
+                        <ul class="accordeon-list" id="productInfo">
+                            <div>
+                                <!-- Card de agendamento de serviços -->
+                                <div class="card-agendamento" id="passosAgendamento">
+                                    <div class="header-card-agendamento">
+                                        <img src="../assets/images/icons/calendario-v2.svg"
+                                            alt="Icone do calendário de agendamento de serviços.">
+                                        <h2>Agende este serviço</h2>
+                                    </div>
+                                    <p>
+                                        Você pode fazer o agendamento e finalizar a compra <strong>pelo site ou em uma
+                                            de nossas
+                                            lojas.</strong>
+                                        <br><br>
+                                        Para garantir o seu horário, agende agora mesmo <span
+                                            style="padding-left:3px">:)</span>
+                                    </p>
+                                    <button onclick="pushButton('clinicButtonAgende', 'Vacinas', 'Vacinas')"
+                                        id="agendarBtn" class="btn-agendar-servico">Agendar Serviço</button>
+
+                                    <!-- <div class="footer-card-agendamento">
+                                        <img src="../assets/images/icons/local-v2.svg"
+                                            alt="Icone ver lojas onde realizar.">
+                                        <a href="">Ver lojas onde realizar</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </ul>
+
+                    </div>
+                    <div>
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+
+
+<div class="stepListContainer" id="containerMsgVendas">
+
+    <img id="msgVendasLojas" src="../assets/images/mensagemVendas.svg" />
+</div>
+
+
+
+</section>
+
+<div id="LHModalOverlay" class="modalAgendamento">
+    <!-- Modal Container -->
+    <div class="container-modal modal-agendamento pure-u-1 " id="LHModalContent">
+
+        <!-- Modal Header -->
+        <div class="header-modal pure-g pure-u-1 pure-u-md-1-2 pure-u-xl-1-2 ">
+            <img alt="Icone Calendário" class="img-calendario-modal pure-u-1-8"
+                src="../assets/images/modal/icon-feather-calendar.svg">
+            <div class="pure-u-1-2 ">
+                <span>AGENDAR ESTE SERVIÇO</span>
+            </div>
+
+            <img alt="Botão Fechar Modal" src="../assets/images/modal/close.svg" id="btCloseModal"
+                class="close pure-u-1-8">
+        </div>
+
+        <!-- Modal Conteúdo -->
+        <div class="conteudo-modal pure-u-1 pure-u-md-1-2 pure-u-xl-1-2">
+
+            <div>
+                <p class="loja-mais-proxima">ENCONTRE UMA LOJA PRÓXIMA DE VOCÊ!</p>
+                <p>Selecione o estado e cidade onde você quer realizar este serviço: </p>
+            </div>
+
+            <!-- Inputs  -->
+            <div class="container-dinamico pure-g">
+
+                <div class="container-inputs-modal pure-g pure-u-1 ">
+                    <div class="container-estado-cidade pure-u-1-2 pure-u-sm-1-3">
+                        <span class="text-estado-cidade">Estado:</span>
+                        <select name="estado" id="optionsEstado" class="input-modal"
+                            onchange="EscolherEstado(this.value)">
+                            <option value="">Selecione</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                        </select>
+                    </div>
+
+                    <div class="container-estado-cidade  pure-u-1-2 pure-u-sm-1-3">
+                        <span class="text-estado-cidade">Cidade:</span>
+                        <select name="cidade" id="optionsCity" class="input-modal" disabled>
+                            <option>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="pure-g pure-u-1 pure-u-sm-1-3">
+                        <button onclick="Pesquisar(produto)" onload="checkIframeLoad()"
+                            class="btn-pesquisar-modal">PESQUISAR</button>
+                    </div>
+                </div>
+
+                <div class="widget-container pure-u-1">
+                    <div class="linha-modal"></div>
+                    <iframe id="simplyBookIframe"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script src="../assets/scripts/produtosVacinas.js"></script>
+<script src="../assets/scripts/lib/accordeon.js"></script>
+<script src="../assets/scripts/lib/parametros.js"></script>
+<script src="../assets/scripts/lib/modal.js"></script>
+<script src="../assets/scripts/lib/filiaisHandler.js"></script>
+<script src="../assets/scripts/lib/produtoHandler.js"></script>
+<script src="../assets/scripts/lib/agendamento.js"></script>
+<script src="../assets/scripts/lib/tagManager.js"></script>
+
+<script>
+
+    //modal automático
+    var agendamento = Number(getParameters().agendamento);
+
+    if (agendamento == 1) {
+        window.onload = function () {
+            const modal = document.querySelector('#LHModalOverlay').style.left = "0px"
+        }
+    }
+
+    var produto
+    //Define qual vai ser o escopo da página atribuindo uma variável que armazena só os itens a serem usados
+    var categoria
+    const categoriaItens = produtosVacinas
+    const catAgendamento = produtosVacinas
+
+    //Se chegou a executar esse event listener é porque o parâmetro de produto tá definido
+    // debugger
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        //Busca nessa variável o produto transformando em int o parâmetro recebido por URL
+        produto = categoriaItens.itens.find(({ id }) => id == Number(getParameters().p));
+        categoria = catAgendamento
+
+
+        var key = Object.keys(produto)[0]
+        var value = produto[key]
+
+        if (value == 21) {
+            document.getElementById("passosAgendamento").style.display = "none"
+            document.getElementById("msgVendasLojas").style.display = "block"
+        }
+
+        prenchimentoInterno(produto, categoria);
+        initClinicModals();
+    });
+
+
+
+</script>
+
+</html>

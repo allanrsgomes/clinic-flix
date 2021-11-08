@@ -1,0 +1,307 @@
+ @import url(https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css?ver=1627776462086);
+
+ body {
+   padding: 0px !important;
+   margin: 0px !important;
+   top: 60px;
+ }
+
+ :root {
+   top: 60px;
+   margin: 0;
+   padding: 0;
+   /*Cores */
+   --cor-branca: #fff;
+   --azul-escuro-padrao: #143C8D;
+   /*Font*/
+   --font-family-open-sans: Open Sans;
+   --font-size-14: 14px;
+   --font-size-15: 15px;
+   --font-size-18: 18px;
+   --font-size-19: 19px;
+   --font-color-padrao: #1A223F;
+   --letter-spacing-2: 2px;
+   --letter-spacing-3: 3px;
+   --font-weight-300: 300;
+   --font-weight-400: 400;
+   --font-weight-bold: bold;
+   /*Posições*/
+   --display-flex: flex;
+   --jc-space-between: space-between;
+   --position-row: row;
+   --position-column: column;
+   --ai-flex-end: flex-end;
+
+   /*Outros*/
+   --height-45: 45px;
+ }
+
+ .container-modal {
+   top: 60px !important;
+ }
+
+ .container-modal.modal-agendamento {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 27, 83, 0.4);
+   z-index: 2;
+   transition: 350ms;
+   display: block;
+   flex-direction: column;
+   top: 60px;
+ }
+
+ .container-modal.modal-agendamento * {
+   letter-spacing: normal;
+   word-spacing: normal;
+   text-rendering: auto;
+ }
+
+ /* Header */
+ .modal-agendamento .header-modal {
+   height: auto;
+   padding: 10px 30px;
+   background-color: var(--azul-escuro-padrao);
+   color: var(--cor-branca);
+   font-family: var(--font-family-open-sans);
+   font-size: var(--font-size-18);
+   font-weight: var(--font-weight-300);
+   letter-spacing: var(--letter-spacing-2);
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: var(--position-row);
+   display: flex
+ }
+
+ .modal-agendamento .header-modal .img-calendario-modal,
+ .modal-agendamento .header-modal .close {
+   max-height: 20px;
+   width: auto;
+ }
+
+ .modal-agendamento .header-modal .close {
+   margin-left: auto;
+ }
+
+ .modal-agendamento .header-modal div {
+   padding: inherit;
+   width: max-content;
+ }
+
+ /* Modal Conteudo */
+ .modal-agendamento .conteudo-modal {
+   height: 100%;
+   padding: 40px;
+   background-color: var(--cor-branca);
+   display: var(--display-flex);
+   flex-direction: var(--position-column);
+   color: var(--font-color-padrao);
+   font-size: var(--font-size-19);
+   font-weight: var(--font-weight-300);
+   position: relative;
+
+ }
+
+ .modal-agendamento .conteudo-modal div p {
+   margin: 1em 0;
+ }
+
+ .widget-container {
+   height: 100%;
+ }
+
+ .modal-agendamento .conteudo-modal .loja-mais-proxima {
+   font-size: var(--font-size-18);
+   font-weight: var(--font-weight-bold);
+   letter-spacing: var(--letter-spacing-2);
+ }
+
+ .modal-agendamento .container-dinamico {
+   height: 80%;
+ }
+
+ .modal-agendamento .conteudo-modal .container-inputs-modal {
+   display: var(--display-flex);
+   margin-top: 25px;
+   align-items: var(--ai-flex-end);
+ }
+
+ .modal-agendamento .conteudo-modal .container-estado-cidade {
+   display: var(--display-flex);
+   flex-direction: var(--position-column);
+   justify-content: var(jc-space-between);
+   color: var(--font-color-padrao)
+ }
+
+ .modal-agendamento .conteudo-modal .container-estado-cidade .text-estado-cidade {
+   margin-bottom: 12px;
+   font-size: var(--font-size-15)
+ }
+
+ .modal-agendamento .conteudo-modal .container-estado-cidade .input-modal {
+   margin-right: 20px;
+   height: var(--height-45);
+   font-size: var(--font-size-14);
+   border: 2px solid #F0F0F0;
+   border-radius: 5px;
+ }
+
+ .modal-agendamento .conteudo-modal .btn-pesquisar-modal {
+   height: 43px;
+   display: var(--display-flex);
+   padding: 12px;
+   letter-spacing: var(--letter-spacing-2);
+   font-size: var(--font-size-14);
+   background-color: var(--azul-escuro-padrao);
+   color: var(--cor-branca);
+   border: none;
+   border-radius: 2px;
+   font-weight: var(--font-weight-300);
+   width: 100%;
+   margin-top: 10px;
+   justify-content: center;
+ }
+
+ .modal-agendamento .widget-container .linha-modal {
+   border: 1px solid #F0F0F0;
+   margin-top: 30px;
+ }
+
+ .modal-agendamento .widget-container iframe {
+   width: 100%;
+   height: 100%;
+ }
+
+ .widget-container {
+   height: 100%;
+ }
+
+ #simplyBookIframe {
+   width: 100%;
+   height: 100%;
+   border: none;
+ }
+
+ @media (max-width: 400px) {
+   .header-modal {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+   }
+
+   .header-modal>div {
+     order: 3;
+     width: 100%;
+     display: flex;
+     justify-content: space-around
+   }
+
+   .modal-agendamento .widget-container iframe {
+     height: 240px;
+   }
+
+   .modal-agendamento .conteudo-modal {
+     padding: 10px;
+   }
+ }
+
+ #msgVendasLojas {
+   width: 60%;
+   display: none;
+ }
+
+ @media (max-width: 600px) {
+   .modal-agendamento .conteudo-modal {
+     overflow: auto;
+   }
+ }
+
+
+ /* Card de agendamento de serviços */
+ .primaryContent .LHContainer .tab-content-wrapper {
+   display: flex;
+   justify-content: space-between;
+
+ }
+
+ .card-agendamento {
+   display: flex;
+   width: 35%;
+   height: auto;
+   border-radius: 8px;
+   box-shadow: 0px 4px 12px #00000029;
+   background-color: #FFFFFF;
+   justify-content: center;
+   flex-direction: column;
+   float: right;
+ }
+
+ @media (max-width:700px) {
+   .card-agendamento {
+     width: auto;
+     margin-bottom: 40px !important;
+   }
+ }
+
+ .card-agendamento .header-card-agendamento {
+   display: flex;
+   padding: 50px 50px 10px;
+ }
+
+ .card-agendamento .header-card-agendamento h2 {
+   color: #1A223F;
+   margin-left: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1.2px;
+ }
+
+ .card-agendamento .header-card-agendamento img {
+   height: 25px;
+ }
+
+ .card-agendamento p {
+   padding: 30px 50px 30px;
+   text-align: justify;
+   color: #0E1325;
+   font-size: 18px;
+ }
+
+ .card-agendamento .btn-agendar-servico {
+   width: 75%;
+   padding: 13px;
+   margin-bottom: 40px;
+   border: 2px solid #FF9C16;
+   border-radius: 0;
+   background-color: #FFFFFF;
+   text-transform: uppercase;
+   letter-spacing: 1.2px;
+   font-size: 16px;
+   color: #FF9C16;
+ }
+
+ .card-agendamento .btn-agendar-servico:hover {
+   color: #fff;
+   background-color: #FF9C16;
+ }
+
+ .card-agendamento .footer-card-agendamento {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+   color: #143C8D;
+   margin-bottom: 40px;
+ }
+
+ /* 
+ .card-agendamento .svg-local-lojas,
+ .card-agendamento a:hover {
+   color: #1E5CD9;
+ } */
+
+ .card-agendamento .footer-card-agendamento img {
+   height: 20px;
+   margin-right: 5px;
+ }

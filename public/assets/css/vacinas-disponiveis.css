@@ -1,0 +1,173 @@
+.container-filtro-idades {
+    color: #1A223F;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px #00000029;
+    width: 230px;
+    height: auto;
+}
+
+.filtrar-idades {
+    justify-content: center;
+}
+
+.container-filtro-idades input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.container-filtro-idades .filtrar-idades {
+    /* cursor: pointer; */
+    font-family: 'Graphik-Semibold';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-filtro-idades .filtrar-idades span {
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+
+.container-todas-idades {
+    /* max-height: 0;
+    transition: all 0.35s; */
+    background-color: #fff;
+    overflow: auto;
+    margin: 10px;
+}
+
+.container-filtro-idades input:checked+.filtrar-idades {
+    background: #fff;
+}
+
+.container-filtro-idades input:checked+.filtrar-idades::after {
+    transform: rotate(270deg);
+}
+
+.container-filtro-idades input:checked~.container-todas-idades {
+    max-height: 100vh;
+}
+
+/*Style conteúdo Accordion*/
+.todas-idades-cat .linha-cinza {
+    border: 1px solid #F0F0F0;
+    margin: 0 15px 15px;
+    background-color: #F0F0F0
+}
+
+.todas-idades-cat p {
+    margin: 15px 25px 15px;
+    font-size: 16px;
+    color: #143C8D;
+    font-family: 'Graphik-Semibold';
+    letter-spacing: 2px;
+}
+
+
+.todas-idades-cat .todas-vacinas {
+    /*Categoria todas as vacinas*/
+    margin-top: 25px;
+    margin-bottom: 10px
+}
+
+.todas-idades-cat .todas-vacinas span {
+    color: #143C8D;
+    font-family: 'Graphik-Semibold';
+    letter-spacing: 2px;
+}
+
+.todas-idades-cat .options-checkbox {
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+.todas-idades-cat .options-checkbox input+label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.todas-idades-cat .options-checkbox input+label::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    bottom: 0;
+    border: solid 2px #DDDDDD;
+    vertical-align: bottom;
+    border-radius: 5px;
+}
+
+.todas-idades-cat .options-checkbox input:checked+label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 5px;
+    height: 6px;
+    border-right: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    transform: rotate(45deg);
+}
+
+.todas-idades-cat .options-checkbox input:checked+label::before {
+    background-color: #143C8D;
+    border: #143C8D 2px solid;
+}
+
+/*Sobre as vacinas - Final da página*/
+.container-sobre-vacinas {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 40px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .container-sobre-vacinas {
+        flex-direction: column;
+    }
+}
+
+
+.container-sobre-vacinas .img-sobre-vacinas {
+    border-radius: 10px;
+    margin: 20px
+}
+
+.container-sobre-vacinas section div h2 {
+    font-size: 1.5rem;
+}
+
+.container-sobre-vacinas section div p {
+    width: 40vw;
+    height: 30vh;
+    word-break: break-all;
+    box-sizing: border-box;
+    color: #0E1325;
+    padding: 20px
+}
+
+.container-body {
+    width: 100%;
+}
+
+.container-body .servicos-encontrados {
+    color: rgba(36, 63, 140, 1);
+    font-size: 22px;
+    margin-left: 40px;
+    margin-top: 20px;
+}

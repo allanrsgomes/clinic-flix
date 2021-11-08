@@ -1,0 +1,76 @@
+button, .buy-content > a {
+    cursor: pointer;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    font-family: var(--fonte-familia-padrao);
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    color: var(--branco);
+}
+
+button.produtoButton, a.produtoButton {
+    height: 48px;
+    max-width: 776px;
+
+    padding: 10px 20px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+a.produtoButton.produtoCompra {
+    background-color: var(--laranja-padrao);
+    width: max-content;
+}
+
+a.produtoButton.produtoCompra i{
+    margin-left: 5px;
+}
+
+a.produtoButton.smallButton {
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 6px;
+    
+    text-align: center;
+
+    width: 186px;
+    margin-bottom: unset;
+}
+
+button.produtoButton.produtoFiliais {
+
+    color: var(--verde-botoes);
+    border: 1px solid var(--verde-botoes);
+
+    background-color: transparent;
+}
+
+/* Botão de voltar */
+button.filiaisVoltar::before {
+    content: '←';
+    font-family: 'Foco Bold';
+    font-size: 50px;
+}
+
+button.filiaisVoltar:hover {
+    color: rgba(250, 157, 26, 1);
+}
+
+button.filiaisVoltar {
+    margin-top: 5%;
+    color: rgba(0, 57, 134, 1);
+
+}

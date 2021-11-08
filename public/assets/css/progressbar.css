@@ -1,0 +1,34 @@
+.progressbars-container {
+    padding: unset !important;
+}
+
+.card.center-content h3 {
+    color: #1d3780 !important;
+}
+
+.pure-u-md-1-2 .progress-bar,
+.pure-u-md-1-2 .progress-bar>div {
+    height: 30px !important;
+    border: 1px solid #1d3780 !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.pure-u-md-1-2 .progress-bar>div {
+    position: absolute !important;
+    top: -1px !important;
+    left: -1px !important;
+    background-color: #1d3780 !important;
+    border: none !important;
+    border-radius: 0 15px 15px 0 !important;
+}
+
+.pure-u-md-1-2 .progress-with-text {
+    height: auto !important;
+    background-color: #1d3780 !important;
+    color: white !important;
+    padding: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+}

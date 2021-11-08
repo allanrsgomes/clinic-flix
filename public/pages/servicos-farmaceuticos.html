@@ -1,0 +1,183 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/style.css" type="text/css">
+    <title>Clinicflix</title>
+    <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/splide/css/themes/splide-skyblue.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .menu-faixa-etaria h2,
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            color: rgba(36, 63, 140, 1);
+            letter-spacing: -0.04em;
+            line-height: 44px;
+        }
+
+        .menu-faixa-etaria h2 {
+            font-size: 20px;
+        }
+
+        .menu-faixa-etaria h4 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .menu-faixa-etaria .orange-separator {
+            height: 1px;
+            width: 172px;
+            background-color: rgba(250, 157, 26, 1);
+            border: none;
+            margin: 16px 0;
+        }
+
+        .menu-faixa-etaria ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-faixa-etaria ul li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: rgba(36, 63, 140, 1);
+            letter-spacing: -0.01em;
+            line-height: 26px;
+            margin: 0;
+        }
+
+        .menu-faixa-etaria ul li:hover {
+            color: rgba(250, 157, 26, 1);
+        }
+
+        #tab-content-wrapper {
+            margin-top: 43px;
+            align-items: self-start;
+            margin-left: 102px;
+            flex-direction: row;
+        }
+
+        .menu-faixa-etaria {
+            width: 210px;
+            flex-shrink: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.active {
+            text-decoration: underline;
+            color: rgba(250, 157, 26, 1);
+            text-decoration-color: rgba(250, 157, 26, 1);;
+        }
+
+        a.active li {
+            color: rgba(250, 157, 26, 1);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 48em) {
+
+            #tab-content-wrapper {
+                margin-left: 3%;
+
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<div class="LHWrapperBody">
+    <div class="content-header" id="LHInfoHeader">
+        <div class="LHContainer">
+            <div class="top-banner">
+                <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png" class="clinic-logo">
+            </div>
+            <h1 class="page-title">Serviços Farmacêuticos</h1>
+            <div class="page-desc">A Panvel oferece uma série de procedimentos e consultas farmacêuticas em ambientes individualizados para você ficar sempre bem
+            </div>
+        </div>
+    </div>
+    <div class="LHContainer">
+
+        <div class="inner-content default-content">
+            <div id="tab-content-wrapper">
+                <div id="lhCardWrapper" class="lhCardContainerCard">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/produtosServicosFarmaceuticos.js"></script>
+<script>
+
+    //#tab-content-wrapper - desktop; #vacinas - mobile
+
+    const cardsContainer = document.getElementById("lhCardWrapper");
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        todasServicos();
+    });
+
+    const mountCards = (array, container) => {
+
+        for(vacina of array){
+
+            var link = document.createElement("a");
+            link.href = `servicos-farmaceuticos-info.html?id=${vacina.id}`;
+
+            var div = document.createElement("div");
+            div.classList.add('cartao');
+
+            div.style.backgroundImage = `url( ${vacina.img} )`; 
+
+            var h3 = document.createElement("h3");
+            h3.innerText = vacina.nome;
+
+            div.appendChild(h3);
+            link.appendChild(div);
+
+            container.appendChild(link);
+        }
+    }
+
+    const filtrarVacinas = (grupo, btn) => {
+
+        const vacinasFiltradas = (query) => {
+            return vacinas.filter(function (el) {
+                return el.grupo.includes(query);
+            });
+        }
+
+        cardsContainer.innerHTML = "";
+
+        mountCards(vacinasFiltradas(grupo), cardsContainer);
+
+        var menuBtnList = document.querySelectorAll('div.menu-faixa-etaria ul > a');
+
+        for(link of menuBtnList){
+            if(link.classList.contains('active'))
+                link.classList.remove('active');
+        }
+
+        btn.classList.add('active');
+
+    }
+
+    const todasServicos = () => {
+        cardsContainer.innerHTML = "";
+
+        mountCards(produtosServicosFarmaceuticos.itens, cardsContainer);
+    }
+</script>
+</html>
