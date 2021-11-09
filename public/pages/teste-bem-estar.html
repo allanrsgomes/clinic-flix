@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/base.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/container.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/text.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/button.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/header.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/accordeon.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/base.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/container.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/text.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/button.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/accordeon.css" type="text/css">
 
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/geneticos.css" type="text/css">
-  <link rel="stylesheet" href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/bem-estar.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/geneticos.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/bem-estar.css" type="text/css">
 
   <title>Clinicflix</title>
 
@@ -21,224 +21,174 @@
       text-decoration: none;
     }
 
-
-
     .video-preview {
       height: 347px;
       width: 524px;
-
       cursor: pointer;
     }
 
-
-
     .partner-info button a {
       color: rgba(255, 255, 255, 1);
-
       text-decoration: none;
     }
 
     .content-header#LHTesteInfo {
-      background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-geneticos/Banners/banner-interno.png);
+      background-image: url(../assets/images/vacinas/Banners/1756-Interna-1025x444.png);
     }
   </style>
 </head>
 
 <div class="LHWrapperBody">
   <div class="hoverContent">
-    <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover" target="_blank" rel="noopener">
-        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png" alt="ÍconeWhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
+      target="_blank" rel="noopener">
+      <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
+        alt="ÍconeWhatsApp">
     </a>
-</div>
-    <div class="content-header" id="LHTesteInfo">
-      <div class="top-banner">
-        <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
-        <div class="partner-logo-wrapper">
-          <img class="partner-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hygia.png">
-        </div>
-        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png" class="clinic-logo">
+  </div>
+  <div class="content-header" id="LHTesteInfo">
+    <div class="top-banner">
+      <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
+      <div class="partner-logo-wrapper">
+        <img class="partner-logo"
+          src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hygia.png">
       </div>
-      <div class="header-banner">
-        <div class="partner-info">
-          <div class="name-info">
-            <h1 class="page-title"> Teste Genético Bem-estar </h1>
-            <div class="page-desc">
-              Pode ser que você precise de uma quantidade de ferro muito menor do que você precisa de vitaminas ou que
-              você seja mais sensível ao consumo de sal.
-            </div>
+      <img src="../assets/images/GroupV2.png" class="clinic-logo" style="margin-right:30px">
+    </div>
+    <div class="header-banner">
+      <div class="partner-info">
+        <div class="name-info">
+          <h1 class="page-title"> Teste Genético Bem-estar </h1>
+          <div class="page-desc">
+            Pode ser que você precise de uma quantidade de ferro muito menor do que você precisa de vitaminas ou que
+            você seja mais sensível ao consumo de sal.
           </div>
-          <a class="produtoButton produtoCompra" href="https://www.panvel.com/panvel/teste-genetico-dna-hygia-bem-estar/p-109573">Comprar <i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+        </div>
+        <a class="produtoButton produtoCompra" id="btnComprar-bemEstar"
+          href="https://www.panvel.com/panvel/teste-genetico-dna-hygia-bem-estar/p-109573">Comprar <i
+            class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  <section class="primaryContent">
+    <div class="LHContainer">
+      <div class="inner-content default-content">
+        <div id="tab-content-wrapper">
+          <ul class="accordeon-list">
+            <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+              <h3>Você sabe como seu corpo reage à absorção de minerais e vitaminas?</h3>
+              <section class="accordeon-content" id="conteiner-ask">
+                <p>Pode ser que você precise de uma quantidade de ferro muito menor do que você
+                  precisa de vitaminas
+                  ou que você seja mais sensível ao consumo de sal.</p>
+                <div class="pure-g progressbars-container flex-evenly">
+                  <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="icon-row">
+                      <img src="../assets/images/icons/icon-ferro.svg" alt="Icon necessidades de ferro"
+                        class="icones-bem-estar">
+                      <div class="progress-bar-wrapper">
+                        <h5>Necessidades de ferro</h5>
+                        <div class="progress-bar">
+                          <div class="progress-30"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon-row">
+                      <img src="../assets/images/icons/icon-sodio.svg" alt="Icon sensibilidade ao sódio"
+                        class="icones-bem-estar">
+                      <div class="progress-bar-wrapper">
+                        <h5>Sensibilidade ao sódio</h5>
+                        <div class="progress-bar">
+                          <div class="progress-70"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="icon-row">
+                      <img src="../assets/images/icons/icon-vitaminas.svg" alt="Icon necessidades de vitaminas"
+                        class="icones-bem-estar">
+                      <div class="progress-bar-wrapper">
+                        <h5>Necessidades de vitaminas</h5>
+                        <div class="progress-bar">
+                          <div class="progress-70"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon-row">
+                      <img src="../assets/images/icons/icon-antioxidadante.svg" alt="Icone capacidade antioxidadante"
+                        class="icones-bem-estar">
+                      <div class="progress-bar-wrapper">
+                        <h5>Capacidade antioxidante</h5>
+                        <div class="progress-bar progress-with-text">
+                          O seu perfil genético sugere uma capacidade antioxidante normal.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </li>
+            <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+              <h3>Conheça mais sobre
+                o teste Bem-estar</h3>
+              <div class="accordeon-content" id="conteiner-ask">
+                <p>Ideal para identificar como o seu corpo reage a minerais como ferro e sódio, impacto da
+                  vitamina A,
+                  C ou D, além de outras informações para melhorar sua saúde. Consulte sempre seu médico.</p>
+              </div>
+            </li>
+            <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+              <h3>O que é analisado?</h3>
+              <div class="accordeon-content" id="conteiner-ask">
+                <p>Este teste genético analisa o seu DNA com o objetivo de avaliar 102
+                  variantes
+                  genéticas de 75 genes que, de
+                  uma forma determinante, estão associadas à nutrição e controle de peso.</p>
+                <br>
+                <p>Os genes estudados e a resposta do
+                  organismo à ingestão de alimentos baseiam-se em estudos científicos de referência internacional.</p>
+              </div>
+            </li>
+
+            <!-- Botão de Comprar -->
+            <a class="produtoButton produtoCompra" id="btnComprar-bemEstar"
+              href="https://www.panvel.com/panvel/teste-genetico-dna-hygia-bem-estar/p-109573">
+              Comprar
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </a>
+
+          </ul>
         </div>
       </div>
     </div>
-    <section class="primaryContent">
-      <div class="LHContainer">
-        <div class="inner-content default-content">
-          <div id="tab-content-wrapper">
-            <ul class="accordeon-list">
-              <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
-                <h3>Você sabe como seu corpo reage à absorção de minerais e vitaminas?</h3>
-                <section class="accordeon-content">
-                  <p>Pode ser que você precise de uma quantidade de ferro muito menor do que você precisa de vitaminas
-                    ou que você seja mais sensível ao consumo de sal.</p>
-                  <div class="pure-g progressbars-container flex-evenly">
-                    <div class="pure-u-1 pure-u-md-1-2">
-                      <div class="icon-row">
-                        <img
-                          src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_614.svg"
-                          alt="">
-                        <div class="progress-bar-wrapper">
-                          <h5>Necessidades de ferro</h5>
-                          <div class="progress-bar">
-                            <div class="progress-30"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-row">
-                        <img
-                          src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_615.svg"
-                          alt="">
-                        <div class="progress-bar-wrapper">
-                          <h5>Sensibilidade ao sódio</h5>
-                          <div class="progress-bar">
-                            <div class="progress-70"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-2">
-                      <div class="icon-row">
-                        <img
-                          src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_158.svg"
-                          alt="">
-                        <div class="progress-bar-wrapper">
-                          <h5>Necessidades de vitaminas</h5>
-                          <div class="progress-bar">
-                            <div class="progress-70"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="icon-row">
-                        <img
-                          src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_616.svg"
-                          alt="">
-                        <div class="progress-bar-wrapper">
-                          <h5>Capacidade antioxidante</h5>
-                          <div class="progress-bar progress-with-text">
-                            O seu perfil genético sugere uma capacidade antioxidante normal.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </li>
-              <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
-                <h3>Conheça mais sobre
-                  o teste Bem-estar</h3>
-                <div class="accordeon-content">
-                  <p>Ideal para identificar como <strong>o seu corpo reage a minerais como ferro e sódio, impacto da
-                      vitamina A,
-                      C ou D</strong>, além de outras informações para melhorar sua saúde. Consulte sempre seu médico.</p>
-                </div>
-              </li>
-              <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
-                <h3>O que é analisado?</h3>
-                <div class="accordeon-content">
-                  <p>Este teste genético <strong>analisa o seu DNA</strong> com o objetivo de avaliar <strong>102
-                      variantes
-                      genéticas de 75 genes</strong> que, de
-                    uma forma determinante, estão associadas à nutrição e controle de peso.</p>
-                  <p>Os genes estudados e a resposta do
-                    organismo à ingestão de alimentos baseiam-se em estudos científicos de referência internacional.</p>
-                </div>
-              </li>
-              <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
-                <h3>Como fazer os testes</h3>
-                <section class="accordeon-content icon-help-grid">
-                  <div class="pure-g flex-evenly">
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_402.svg"
-                        alt="">
-                      <h3><span>1</span>Compra</h3>
-                      <p>A compra pode ser feita em todos os canais de venda da Panvel: lojas, aplicativo, panvel.com ou
-                        Alô
-                        Panvel.
-                      </p>
-                      <button><a
-                          href="https://www.panvel.com/panvel/teste-genetico-dna-hygia-bem-estar/p-109573">Comprar</a></button>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_409.svg"
-                        alt="">
-                      <h3><span>2</span>Confirme seus dados e receba o kit</h3>
-                      <p>Você receberá um email de confirmação da aquisição, confirme seu endereço para entregarmos seu
-                        kit
-                        coleta.
-                      </p>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_414.svg"
-                        alt="">
-                      <h3><span>3</span>Coleta da amostra</h3>
-                      <p>É importante seguir as instruções para que o teste ocorra da melhor forma possível.</p>
-                      <button class="btnVideo">Assistir vídeo</a>
-                    </div>
-                  </div>
-                  <div class="pure-g flex-evenly">
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_420.svg"
-                        alt="">
-                      <h3><span>4</span>Envio</h3>
-                      <p>O envio é bem simples, basta despachar pelo correio. A postagem é pré paga por nós.</p>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_425.svg"
-                        alt="">
-                      <h3><span>5</span>Análise</h3>
-                      <p>Iremos fornecer informações mais assertivas sobre seu corpo de acordo com o teste adquirido.</p>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
-                      <img
-                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_429.svg"
-                        alt="">
-                      <h3><span>6</span>Resultados</h3>
-                      <p>Você encontrará diversas informações a partir do seu resultado. Recomendamos que você procure um
-                        profissional técnico qualificado para que o… <br /> <strong>Ver Mais</strong></p>
-                    </div>
-                  </div>
-                </section>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  </section>
 
-    <div id="LHModalOverlay" class="modalAgendamento">
-      <dialog id="lhModalColetaVideo" aria-labelledby="LHModalTitle">
-        <button id="btCloseModal" aria-labelledby="Fechar"></button>
+  <!-- <div id="LHModalOverlay" class="modalAgendamento">
+    <dialog id="lhModalColetaVideo" aria-labelledby="LHModalTitle">
+      <button id="btCloseModal" aria-labelledby="Fechar"></button>
 
-        <section id="LHModalContent">
-          <iframe class="iframe-youtube" src="https://www.youtube.com/embed/6-DZ2LwrUfM?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" allowscriptaccess=" always" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="315" frameborder="0"></iframe>
-        </section>
-      </dialog>
-    </div>
+      <section id="LHModalContent">
+        <iframe class="iframe-youtube"
+          src="https://www.youtube.com/embed/6-DZ2LwrUfM?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"
+          allowscriptaccess=" always"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen="" width="100%" height="315" frameborder="0"></iframe>
+      </section>
+    </dialog>
+  </div> -->
 
 </div>
 <!-- Base -->
-<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/accordeon.js"></script>
+<script
+  src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/accordeon.js"></script>
 <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/busca.js"></script>
 <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/cards.js"></script>
 <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/sliders.js"></script>
 <script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/lib/modal.js"></script>
 
 
-<script src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/produtosTestesGeneticos.js"></script>
+<script
+  src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/scripts/produtosTestesGeneticos.js"></script>
 
 </html>
