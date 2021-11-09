@@ -89,7 +89,7 @@ const mountSlideButton = (content, categoria, categoriaMobile) => {
 
         var link = document.createElement('a');
 
-        link.setAttribute("onclick", "event.preventDefault(); pushLink('clinicServiços', " + content.nome + ", " + categoria + ", 'linkPosition')");
+        link.setAttribute("onclick", "pushLink('clinicServiços', " + content.nome + ", " + categoria + ", 'linkPosition')");
 
         link.appendChild(innerDiv);
 

@@ -15,8 +15,7 @@ const initClinicModals = () => {
         //     btnModalAgendamento.classList.add('bt-abrir-agendamento');
         // }
 
-        // if(modalQuestionario)
-        // {}
+
 
         var btnQuestionario = document.querySelector('#covid-slide01')
 
