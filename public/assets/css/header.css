@@ -26,7 +26,6 @@
     position: relative;
     box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.20);
     font-family: var(--fonte-familia-padrao);
-    font-style: italic;
 }
 
 .LHWrapperBody div.LHHeaderInfo .clinic-logo {
@@ -70,7 +69,6 @@ button.btnVoltar {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-
     margin-bottom: 85px;
 }
 
@@ -78,7 +76,6 @@ button.btnVoltar {
 
     .LHWrapperBody div.LHHeaderInfo div.innerHeader {
         flex-direction: column;
-
         align-items: center;
         width: 100%;
     }
@@ -164,10 +161,8 @@ div.top-banner {
 
 .header-banner .page-title {
     font-family: foco, Open Sans, sans-serif;
-    font-style: italic;
     font-weight: bold;
     font-size: 46px;
-    color: rgba(255, 255, 255, 1);
     margin-bottom: 11px;
 }
 
@@ -182,8 +177,8 @@ div.partner-info {
     width: 100%;
     max-width: 1049px;
     font-family: 'Foco';
-    font-size: 20px;
-    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    color: var(--azul-escuro-padrao);
     line-height: 26px;
 }
 
