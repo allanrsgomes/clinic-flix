@@ -28,15 +28,13 @@
     <div class="hoverContent">
         <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
             target="_blank" rel="noopener">
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
-                alt="ÍconeWhatsApp">
+            <img src="../assets/icons/WhatsApp.png" alt="ÍconeWhatsApp">
         </a>
     </div>
     <div class="content-header LHHeaderInfo covid-header" id="LHInfoHeader">
         <div class="top-banner">
             <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png"
-                class="clinic-logo">
+            <img src="../assets/images/Group.png" class="clinic-logo">
         </div>
         <div class="header-banner">
             <div class="partner-info">
@@ -55,39 +53,29 @@
             <div class="inner-content default-content">
                 <div id="tab-content-wrapper">
                     <ul class="accordeon-list" id="productInfo">
+                        <div class="card-agendamento" id="passosAgendamento">
+                            <div class="header-card-agendamento">
+                                <img src="../assets/images/icons/calendario-v2.svg"
+                                    alt="Icone do calendário de agendamento de serviços.">
+                                <h2>Agende este serviço</h2>
+                            </div>
+                            <p>
+                                Você pode fazer o agendamento e finalizar a compra <strong>pelo site ou em uma
+                                    de nossas
+                                    lojas.</strong>
+                                <br><br>
+                                Para garantir o seu horário, agende agora mesmo <span style="padding-left:3px">:)</span>
+                            </p>
+                            <button onclick="pushButton('clinicButtonAgende', 'Vacinas', 'Vacinas')" id="agendarBtn"
+                                class="btn-agendar-servico">Agendar Serviço</button>
+
+                            <!-- <div class="footer-card-agendamento">
+                                <img src="../assets/images/icons/local-v2.svg"
+                                    alt="Icone ver lojas onde realizar.">
+                                <a href="">Ver lojas onde realizar</a>
+                            </div> -->
+                        </div>
                     </ul>
-                    <hr class="blue-separator">
-                    <div class="stepListContainer filialPanvel">
-                        <ul class="center-text pure-g stepList">
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="../assets/images/icons/seringa.png" alt="">
-                                <p class="step-title">
-                                    1.
-                                    Agendar dia e horário
-                                </p>
-                            </li>
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/icons/loja.png"
-                                    alt="">
-                                <p class="step-title">
-                                    2.
-                                    Agendar loja para aplicação
-                                </p>
-                            </li>
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/icons/dinheiro.png"
-                                    alt="">
-                                <p class="step-title">
-                                    3.
-                                    Agendar o teste
-                                </p>
-                                <button id="agendarBtn"
-                                    onclick="pushButton('clinicButtonComprar', 'Covid-19', 'Testes Covid-19')">Agende
-                                    aqui</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <hr class="blue-separator">
                 </div>
             </div>
         </div>

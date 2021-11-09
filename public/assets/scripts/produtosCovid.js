@@ -42,7 +42,7 @@ const produtosTestesCovid = {
             categoria: 'rapido antigeno',
             laboratorio: 'panvel'
         },
-        /*{
+        {
             id: 3,
             nome: "Anticorpo (IGG/IGM)",
             img: "testes-covid/Thumbs/anticorpo.png",
@@ -57,7 +57,7 @@ const produtosTestesCovid = {
             urlLoja: "",
             tagsPalavras: ['covid'],
             categoria: 'anticorpos'
-        },*/
+        },
         {
             id: 11,
             nome: "Covid-19 + Influenza (Gripe) ",
