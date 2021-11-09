@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/button.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/accordeon.css" type="text/css">
-
+    <link rel="stylesheet" href="../assets/css/teste-dengue.css">
     <link rel="stylesheet" href="../assets/css/modal.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/agendamento.css" type="text/css">
 
@@ -30,64 +30,64 @@
     <div class="hoverContent">
         <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
             target="_blank" rel="noopener">
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
-                alt="ÍconeWhatsApp">
+            <img src="../assets/images/icons/WhatsApp.png" alt="ÍconeWhatsApp">
         </a>
     </div>
     <div class="content-header LHHeaderInfo dengue-header" id="LHInfoHeader">
         <div class="top-banner">
             <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png"
-                class="clinic-logo">
+            <img src="../assets/images/Group.png" class="clinic-logo">
         </div>
         <div class="header-banner">
             <div class="partner-info">
                 <div class="name-info">
                     <h1 class="headerTitle"> </h1>
-                    <div class="headerDescription" id='LHProdutoDesc'>
-                    </div>
+                    <div class="headerDescription" id='LHProdutoDesc'> </div>
                 </div>
                 <a class="produtoButton produtoCompra" id="btnCompra"
                     onclick="pushButton('clinicButtonComprar', 'Teste Dengue', 'Testes da dengue')"> COMPRAR <i
-                        class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                        class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </div>
+
+
+
+
+
     <section class="primaryContent">
         <div class="LHContainer">
-            <div class="inner-content default-content">
-                <div id="tab-content-wrapper">
+            <div class="container-page-dengue">
+                <ul id="productInfo">
                     <div>
-                        <ul class="accordeon-list" id="productInfo">
-                            <div>
-                                <!-- Card de agendamento de serviços -->
-                                <div class="card-agendamento">
-                                    <div class="header-card-agendamento">
-                                        <img src="../assets/images/icons/calendario-v2.svg"
-                                            alt="Icone do calendário de agendamento de serviços.">
-                                        <h2>Agende este serviço</h2>
-                                    </div>
-                                    <p>
-                                        Você pode fazer o agendamento e finalizar a compra <strong>pelo site ou em uma
-                                            de nossas
-                                            lojas.</strong>
-                                        <br><br>
-                                        Para garantir o seu horário, agende agora mesmo <span
-                                            style="padding-left:3px">:)</span>
-                                    </p>
-                                    <button id="agendarBtn" class="btn-agendar-servico">Agendar Serviço</button>
+                        <!-- Card de agendamento de serviços -->
+                        <div class="card-agendamento" id="page-teste-dengue">
+                            <div class="header-card-agendamento">
+                                <img src="../assets/images/icons/calendario-v2.svg"
+                                    alt="Icone do calendário de agendamento de serviços.">
+                                <h2>Agende este serviço</h2>
+                            </div>
+                            <p>
+                                Você pode fazer o agendamento e finalizar a compra <strong>pelo site ou em uma
+                                    de nossas
+                                    lojas.</strong>
+                                <br><br>
+                                Para garantir o seu horário, agende agora mesmo <span style="padding-left:3px">:)</span>
+                            </p>
+                            <button id="agendarBtn" class="btn-agendar-servico">Agendar Serviço</button>
 
-                                    <!-- <div class="footer-card-agendamento">
+                            <!-- <div class="footer-card-agendamento">
                                         <img src="../assets/images/icons/local-v2.svg"
                                             alt="Icone ver lojas onde realizar.">
                                         <a href="">Ver lojas onde realizar</a>
                                     </div> -->
-                                </div>
-                            </div>
-                        </ul>
-
+                        </div>
                     </div>
-                </div>
+                </ul>
+
+
+
             </div>
         </div>
     </section>
@@ -112,8 +112,10 @@
             <div class="conteudo-modal pure-u-1 pure-u-md-1-2 pure-u-xl-1-2">
 
                 <div>
-                    <p class="loja-mais-proxima">ENCONTRE UMA LOJA PRÓXIMA DE VOCÊ!</p>
-                    <p>Selecione o estado e cidade onde você quer realizar este serviço: </p>
+                    <p class="loja-mais-proxima">ENCONTRE UMA LOJA PRÓXIMA DE VOCÊ!
+                    </p>
+                    <p>Selecione o estado e cidade onde você quer realizar este
+                        serviço: </p>
                 </div>
 
                 <!-- Inputs  -->

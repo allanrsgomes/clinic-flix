@@ -1,0 +1,40 @@
+/* seta do accordeon
+
+.accordeon-teste-dengue>h3::before {
+  content: "+";
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left: calc(20px*-2);
+  font-size: 17px;
+  color: #fff;
+  background-color: rgba(250, 157, 26, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordeon-teste-dengue>h3::before {
+  content: "-";
+} */
+
+.container-page-dengue #productInfo {
+  margin-top: 120px !important;
+}
+
+
+
+@media screen and (max-width: 905px) {
+
+  .container-page-dengue #productInfo {
+    margin-left: 45px
+  }
+
+  #page-teste-dengue {
+    margin: 25px;
+    width: 90%;
+  }
+
+
+}
