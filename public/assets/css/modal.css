@@ -13,7 +13,7 @@ iframe.lhModalPadrao {
     height: 80vh;
     border-radius: 8px;
 
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/wp7131553-apple-tv-wallpapers-2x.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/background/wp7131553-apple-tv-wallpapers-2x.png);
     background-repeat: round;
     background-size: contain;
 
@@ -54,7 +54,7 @@ div.lhModal {
 /* Modal Content/Box */
 
 .LHWrapperBody .clinicflix-modal {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/modal-bg.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/background/modal-bg.png);
     background-size: cover;
     background-color: #fefefe;
     margin: 55px auto 0;

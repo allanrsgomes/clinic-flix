@@ -42,10 +42,11 @@ const produtosTestesCovid = {
             categoria: 'rapido antigeno',
             laboratorio: 'panvel'
         },
-        /*{
+        {
             id: 3,
             nome: "Anticorpo (IGG/IGM)",
             img: "testes-covid/Thumbs/anticorpo.png",
+            colorType: "light",
             sobre: "PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus no momento da coleta.<br/> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a OMS*",
             periodo: "Após 3 dias do início dos sintomas ou possível contato com vírus. <br/>*pode ser feito até 7 dias, após reduz a eficácia*",
             preparacao: "Não é necessário jejum ou qualquer preparo anterior a coleta. ",
@@ -53,11 +54,13 @@ const produtosTestesCovid = {
             levar: "Você deve apresentar um documento com foto e o cupom fiscal da compra. O cupom pode ser apresentado em sua forma física ou digital, disponível no Site e App Panvel.",
             porque: "Os testes são importantes para os cálculos estatísticos e controle epidemiológico. Os diagnósticos são essenciais para a tomada de decisão das autoridades quanto às políticas públicas para a contenção das doenças. <br/> <br/>  Além disso, servem para o paciente alertar as pessoas próximas, com quem teve contato, para que façam o teste também.",
             prazo: "48 horas úteis.<br/>  Em caso de dúvidas, acesse o Panvel Fique Bem. ",
-            url: "/panvel/teste-covid.do?p=3",
-            urlLoja: "",
+            url: "https://www.panvel.com/panvel/teste-covid.do?p=1",
+            urlLoja: "https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-oral-ecodiagnostica/p-109572",
+            urlInterna: 'https://www.panvel.com/panvel/teste-covid.do?p=',
             tagsPalavras: ['covid'],
-            categoria: 'anticorpos'
-        },*/
+            categoria: 'anticorpos',
+            idAgendamento: '45'
+        },
         {
             id: 11,
             nome: "Covid-19 + Influenza (Gripe) ",

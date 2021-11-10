@@ -54,7 +54,7 @@ div.bt-abrir-assistVirtual p {
 }
 
 #btCloseModal:before {
-    content: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/modal/close.svg);
+    content: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/modal/close.svg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +122,7 @@ div.bt-abrir-assistVirtual p {
 }
 
 .assistVirtualModal #LHModalQuest {
-    background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/modal_bg.png);
+    background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/background/modal_bg.png);
     background-size: cover;
     background-position: center;
     overflow: hidden;

@@ -640,30 +640,6 @@ const produtosVacinas =
             tagsPalavras: ['Engerix', 'GSK', 'vacina', 'vacinas'],
             idAgendamento: 16,
         },
-        {
-            id: 32,
-            grupo: [16, 22],
-            nome: "vacina teste",
-            sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença.<br/><br/>É composta por proteína de superfície do vírus da hepatite B purificado, hidróxido de alumínio, cloreto de sódio e água para injeção. Pode conter fosfato de sódio, fosfato de potássio e borato de sódio.<br/><br/>A rede pública utiliza a apresentação multidose (mais de uma dose por frasco), que contém timerosal (derivado do mercúrio) como conservante.",
-            prevencao: "Infecção do fígado (hepatite) causada pelo vírus da hepatite B.",
-            posologia: "Para a vacinação rotineira de crianças, o Programa Nacional de Imunizações (PNI) adotou o esquema de quatro doses: uma dose em formulação isolada ao nascimento e doses aos 2, 4 e 6 meses de vida, incluídas na vacina pentavalente de células inteiras. A Sociedade Brasileira de Pediatria (SBP) e a Sociedade Brasileira de Imunizações (SBIm) recomendam os esquemas de quatro doses (adotado pelo PNI) ou de três doses: ao nascimento, em formulação isolada, e aos 2 e 6 meses de vida, como parte da vacina hexavalente acelular. Aos 4 meses é recomendada a vacina penta acelular, que não contém o antígeno hepatite B em sua formulação.<br/>    Para crianças mais velhas, adolescentes e adultos não vacinados no primeiro ano de vida, o PNI, a SBP e a SBIm recomendam três doses, com intervalo de um ou dois meses entre primeira e a segunda doses e de seis  meses entre a primeira e a terceira.<br/>",
-            reacoes: "Em 3% a 29% dos vacinados pode ocorrer dor no local da aplicação; endurecimento, inchaço e vermelhidão acometem de 0,2% a 17% das pessoas.<br/>    Em relação às manifestações gerais, de 1% a 6% dos vacinados apresentam febre bem tolerada e autolimitada nas primeiras 24 horas após a aplicação; cansaço, tontura, dor de cabeça, irritabilidade e desconforto gastrintestinal acometem de 1% a 20%.<br/>    A ocorrência de púrpura trombocitopênica idiopática após administração da vacina hepatite B é um evento raro, registrado em menos de 0,01% dos vacinados, e até hoje não foi bem estabelecido se esses poucos casos estão de fato relacionados à vacina ou se foi apenas coincidência. Nestes casos, as manchas roxas ou avermelhadas na pele e a diminuição da contagem de plaquetas que caracterizam a doença surgiram poucos dias a até dois meses depois da vacinação.<br/>    Anafilaxia também é muito rara: um caso em 600 mil adolescentes e adultos vacinados, sendo mais rara ainda em crianças.<br/>    Tais eventos adversos estão relacionados à vacina hepatite B isolada. Aqueles associados às vacinas combinadas com componente hepatite B podem ser encontrados nos tópicos que tratam de cada uma especificamente: DTPa-VIP-HB/Hib e DTPw-HB/Hib e vacina combinada hepatite A e B.<br/>",
-            indicacoes: "Para pessoas de todas as faixas etárias. Faz parte da rotina de vacinação das crianças, devendo ser aplicada, de preferência, nas primeiras 12-24 horas após o nascimento, para prevenir hepatite crônica – forma que acomete 90% dos bebês contaminados ao nascer.<br/><br/>Especialmente indicada para gestantes não vacinadas.",
-            contraindicacoes: "Não deve ser aplicada em pessoas que apresentaram anafilaxia com qualquer componente da vacina ou com dose anterior. Ou nas que desenvolveram púrpura trombocitopênica após dose anterior de vacina com componente hepatite B.",
-            viaaplicacao: "Intramuscular.",
-            preco: 56.81,
-            img: "vacinas/Thumbs/default.png",
-            url: "https://www.panvel.com/panvel/vacina-detalhe.do?p=32",
-            urlInterna: "https://www.panvel.com/panvel/vacina-detalhe.do?p=",
-            urlLoja: 'https://www.panvel.com/panvel/buscarProduto.do?termoPesquisa=vacina%20hepatite%20b',
-            // fornecedores: [ 
-            //     { nome: 'Adulto - Engerix GSK', urlInterna: 'https://www.panvel.com/panvel/vacina-hepatite-b-adulto-engerix-gsk/p-120378', idAgendamento: '16'}, 
-            //     { nome: 'Pediátrico - Engerix GSK', urlInterna: 'https://www.panvel.com/panvel/vacina-hepatite-b-pediatrico-engerix-gsk/p-120379', idAgendamento: '17'} 
-            // ],
-            tagsDoenças: ['hepatite B'],
-            tagsPalavras: ['Engerix', 'GSK', 'vacina', 'vacinas'],
-            idAgendamento: 52,
-        },
     ]
 
 };

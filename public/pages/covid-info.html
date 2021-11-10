@@ -3,14 +3,30 @@
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/base.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/container.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/text.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/button.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/header.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/accordeon.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/modal.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/agendamento.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/base.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/container.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/text.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/button.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/header.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/accordeon.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/modal.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/agendamento.css"
+        type="text/css">
 
     <title>Teste COVID-19</title>
 
@@ -28,14 +44,14 @@
     <div class="hoverContent">
         <a href="https://api.whatsapp.com/send?phone=555132189000&amp;text=Ol%C3%A1%20" class="button fixedHover"
             target="_blank" rel="noopener">
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/WhatsApp.png"
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/icons/WhatsApp.png"
                 alt="ÍconeWhatsApp">
         </a>
     </div>
     <div class="content-header LHHeaderInfo covid-header" id="LHInfoHeader">
         <div class="top-banner">
             <a href="/panvel/panvelClinic.do"><button class="btnVoltar">Voltar</button></a>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/Group.png"
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/Group.png"
                 class="clinic-logo">
         </div>
         <div class="header-banner">
@@ -55,39 +71,29 @@
             <div class="inner-content default-content">
                 <div id="tab-content-wrapper">
                     <ul class="accordeon-list" id="productInfo">
+                        <div class="card-agendamento" id="passosAgendamento">
+                            <div class="header-card-agendamento">
+                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/icons/calendario-v2.svg"
+                                    alt="Icone do calendário de agendamento de serviços.">
+                                <h2>Agende este serviço</h2>
+                            </div>
+                            <p>
+                                Você pode fazer o agendamento e finalizar a compra <strong>pelo site ou em uma
+                                    de nossas
+                                    lojas.</strong>
+                                <br><br>
+                                Para garantir o seu horário, agende agora mesmo <span style="padding-left:3px">:)</span>
+                            </p>
+                            <button onclick="pushButton('clinicButtonAgende', 'Vacinas', 'Vacinas')" id="agendarBtn"
+                                class="btn-agendar-servico">Agendar Serviço</button>
+
+                            <!-- <div class="footer-card-agendamento">
+                                <img src="../assets/images/icons/local-v2.svg"
+                                    alt="Icone ver lojas onde realizar.">
+                                <a href="">Ver lojas onde realizar</a>
+                            </div> -->
+                        </div>
                     </ul>
-                    <hr class="blue-separator">
-                    <div class="stepListContainer filialPanvel">
-                        <ul class="center-text pure-g stepList">
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="../assets/images/icons/seringa.png" alt="">
-                                <p class="step-title">
-                                    1.
-                                    Agendar dia e horário
-                                </p>
-                            </li>
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/icons/loja.png"
-                                    alt="">
-                                <p class="step-title">
-                                    2.
-                                    Agendar loja para aplicação
-                                </p>
-                            </li>
-                            <li class="pure-u-1 pure-u-md-1-3">
-                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/icons/dinheiro.png"
-                                    alt="">
-                                <p class="step-title">
-                                    3.
-                                    Agendar o teste
-                                </p>
-                                <button id="agendarBtn"
-                                    onclick="pushButton('clinicButtonComprar', 'Covid-19', 'Testes Covid-19')">Agende
-                                    aqui</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <hr class="blue-separator">
                 </div>
             </div>
         </div>
@@ -102,13 +108,14 @@
         <!-- Modal Header -->
         <div class="header-modal pure-g pure-u-1 pure-u-md-1-2 pure-u-xl-1-2 ">
             <img alt="Icone Calendário" class="img-calendario-modal pure-u-1-8"
-                src="../assets/images/modal/icon-feather-calendar.svg">
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/modal/icon-feather-calendar.svg">
             <div class="pure-u-1-2 ">
                 <span>AGENDAR ESTE SERVIÇO</span>
             </div>
 
-            <img alt="Botão Fechar Modal" src="../assets/images/modal/close.svg" id="btCloseModal"
-                class="close pure-u-1-8">
+            <img alt="Botão Fechar Modal"
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/modal/close.svg"
+                id="btCloseModal" class="close pure-u-1-8">
         </div>
 
         <!-- Modal Conteúdo -->
@@ -159,13 +166,20 @@
 </div>
 
 
-<script src="../assets/scripts/produtosCovid.js"></script>
-<script src="../assets/scripts/lib/accordeon.js"></script>
-<script src="../assets/scripts/lib/parametros.js"></script>
-<script src="../assets/scripts/lib/modal.js"></script>
-<script src="../assets/scripts/lib/filiaisHandler.js"></script>
-<script src="../assets/scripts/lib/produtoHandler.js"></script>
-<script src="../assets/scripts/lib/agendamento.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/produtosCovid.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/accordeon.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/parametros.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/modal.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/filiaisHandler.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/produtoHandler.js"></script>
+<script
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/scripts/lib/agendamento.js"></script>
 
 
 <script>

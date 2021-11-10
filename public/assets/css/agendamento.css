@@ -1,4 +1,4 @@
- @import url(https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css?ver=1627776462086);
+ /* @import url(https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css?ver=1627776462086); */
 
  body {
    padding: 0px !important;
@@ -281,6 +281,7 @@
    letter-spacing: 1.2px;
    font-size: 16px;
    color: #FF9C16;
+   z-index: 9;
  }
 
  .card-agendamento .btn-agendar-servico:hover {

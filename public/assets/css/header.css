@@ -38,7 +38,7 @@
 .innerHeader button.btnVoltar,
 button.btnVoltar {
     height: 36px;
-    width: 100px;
+    width: 128px;
     background-color: transparent;
     color: var(--branco);
     font-size: 16px;
@@ -117,28 +117,28 @@ div.LHHeaderInfo .headerDescription {
 
 /* Imagens pra cada header */
 #LHInfoHeader.vacinas-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/Banners/1756-Interna-1025x444.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/vacinas/Banners/1756-Interna-1025x444.png);
 }
 
 #LHInfoHeader.vacinas-menu-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/Banners/1756-Geral-1345x448.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/vacinas/Banners/1756-Geral-1345x448.png);
     top: 0;
 }
 
 #LHInfoHeader.covid-menu-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-covid/Banners/Banners-site-Covid.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/testes-covid/Banners/Banners-site-Covid.png);
 }
 
 #LHInfoHeader.covid-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-covid/Banners/Banner-site-Covid-2.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/testes-covid/Banners/Banner-site-Covid-2.png);
 }
 
 #LHInfoHeader.dengue-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-dengue/Banners/dengue.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/testes-dengue/Banners/dengue.png);
 }
 
 #LHInfoHeader.teste-header {
-    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/testes-geneticos/Banners/banner-interno.png);
+    background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/testes-geneticos/Banners/banner-interno.png);
 }
 
 div.top-banner {

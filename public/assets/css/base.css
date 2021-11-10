@@ -1,12 +1,8 @@
-@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/variaveis.css);
-@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/css/fonts.css);
+@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/variaveis.css);
+@import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/css/fonts.css);
 
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
-/*Não enviar esse import quando for subir*/
-@import url(https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css);
-
 
 /* Tudo que não for o footer injetado na montagem da página */
 .LHWrapperBody :not(footer) {
@@ -50,7 +46,7 @@
 
 /* Definições base */
 .LHWrapperBody {
-    /* background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/background-default.png); */
+    /* background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/background/background-default.png); */
     background-repeat: round;
     background-size: contain;
     padding: 0;

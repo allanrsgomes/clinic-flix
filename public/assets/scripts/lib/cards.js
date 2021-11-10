@@ -34,13 +34,13 @@ const mountCards = (array, container, category) => {
         if (content.hasOwnProperty('imgCard')) {
             div.classList.add('lhCardImage');
             if (content.imgCard == 1) {
-                div.style.backgroundImage = `url('../assets/images/atendimento-domiciliar/Cards/${content.Item}-15.jpg')`;
+                div.style.backgroundImage = `url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/atendimento-domiciliar/Cards/${content.Item}-15.jpg')`;
             } else {
-                div.style.backgroundImage = `url('../assets/images/${content.imgCard} ')`;
+                div.style.backgroundImage = `url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/${content.imgCard} ')`;
             }
             h3.classList.add('hidden')
         } else {
-            div.style.backgroundImage = `url('../page-clinic/assets/images/${content.img} ')`;
+            div.style.backgroundImage = `url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic-tst/assets/images/${content.img} ')`;
         }
 
         div.appendChild(h3);
