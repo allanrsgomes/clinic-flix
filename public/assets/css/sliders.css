@@ -464,8 +464,10 @@ ul#LHMainSliderDesktop-list li {
         padding-top: 22%;
         padding-right: 24%;
         border-radius: unset;
-        position: inherit;
+        position: relative;
         width: 100%;
+        top: 2%;
+        left: 15%;
     }
 
     #LHMainSliderMobile .slide-content .slide-title {
