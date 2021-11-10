@@ -413,27 +413,6 @@ const produtosVacinas =
             idAgendamento: 18,
         },
         // {
-        //     id: 19,
-        //     grupo: [13, 14, 16],
-        //     nome: "HPV4",
-        //     sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença.<br/><br/>É composta pelas proteínas L1 dos papilomavírus humano (HPV) tipos 6,11,16,18, sulfato de hidroxifosfato de alumínio, cloreto de sódio, L-histidina, polissorbato 80, borato de sódio e água para injeção.",
-        //     prevencao: "Infecções persistentes e lesões pré-cancerosas causadas pelos tipos de HPV 6,11,16,18. Também previne o câncer de colo do útero, da vulva, da vagina, do ânus e verrugas genitais (condiloma).",
-        //     posologia: "A vacina é licenciada para meninas e mulheres a partir dos 9 anos aos 45 anos e para meninos e homens entre 9 e 26 anos. O esquema deve ser iniciado o mais cedo possível.<br/>    São recomendadas duas ou três doses, dependendo da idade de início da vacinação.<br/>    Para meninas e meninos de 9 a 14 anos, 11 meses e 29 dias são indicadas duas doses, com intervalo de seis meses entre elas (0 - 6 meses).<br/>    A partir dos 15 anos, são três doses: a segunda, um a dois meses após a primeira, e a terceira, seis meses após a primeira dose (0 - 1 a 2 - 6 meses).<br/>    Independentemente da idade, pessoas imunodeprimidas por doença ou tratamento devem receber três doses: a segunda, um a dois meses após a primeira, e a terceira, seis meses após a primeira dose (0 - 1 a 2 - 6 meses).<br/>",
-        //     reacoes: "Na Inglaterra, após dois anos de incorporação da vacina no calendário do governo, e da administração de 4,5 milhões de doses, somaram-se 4.703 eventos adversos. Desse total, 17% foram manifestações no local da aplicação (dor, vermelhidão e inchaço); 11%, manifestações alérgicas (urticária e prurido); e 37%, manifestações gerais como náuseas, vômitos e dor de cabeça. Foram registradas ainda reações psicogênicas (21%) descritas como pânico e desmaios causados pelo medo da injeção e não pela vacina – principalmente em adolescentes e mulheres jovens. Não ocorreu nenhum caso de doença neurológica, paralisia ou doença autoimune.",
-        //     indicacoes: "O Programa Nacional de Imunizações (PNI) disponibiliza a vacina para:<br/>        Meninas de 9 a 14 anos de idade;<br/>        Meninas de 15 anos que já tenham tomado uma dose;<br/>        Meninos de 11 a 14 anos;<br/>        Indivíduos de 9 a 26 anos de ambos os sexos nas seguintes condições: convivendo com HIV/Aids; pacientes oncológicos em quimioterapia e/ou radioterapia; transplantados de órgãos sólidos ou de medula óssea.<br/>    A Sociedade Brasileira de Pediatria (SBP), a Sociedade Brasileira de Imunizações (SBIm) e a Federação Brasileira das Associações de Ginecologia e Obstetrícia (Febrasgo) recomendam a vacinação de meninas e mulheres de 9 a 45 anos de idade e meninos e jovens de 9 a 26 anos, o mais precocemente possível. Homens e mulheres em idades fora da faixa de licenciamento também podem ser beneficiados com a vacinação, de acordo com critério médico.<br/>",
-        //     contraindicacoes: "Gestantes e pessoas que apresentaram anafilaxia após receber uma dose da vacina ou a algum de seus componentes.",
-        //     viaaplicacao: "Intramuscular.",
-        //     preco: 549.96,
-        //     img: "vacinas/Thumbs/HPV_GSK.png",
-        //     urlInterna: "/panvel/vacina-detalhe.do?p=",
-        //     urlInternaLoja: "",
-        //     fornecedores: [ 
-        //         { nome: 'Nimenrix Pfizer', urlInterna: 'https://www.panvel.com/panvel/vacina-meningite-acwy-nimenrix-pfizer/p-833330'}, 
-        //         { nome: 'Menveo GSK', urlInterna: 'https://www.panvel.com/panvel/vacina-meningite-acwy-menveo-gsk/p-872130' }
-        //     ],
-        //     tagsDoenças: []
-        // },
-        // {
         //     id: 20,
         //     grupo: [2, 4, 6, 9, 10, 12, 14, 15, 16, 17],
         //     nome: "Tríplice Bacteriana Acelular do Tipo Adulto com Poliomielite – dTpa-VIP ",
@@ -502,7 +481,7 @@ const produtosVacinas =
         {
             id: 23,
             grupo: [13, 15, 22],
-            nome: "Hpv 6,11,16,18",
+            nome: "Hpv 6, 11, 16, 18", // HPV Quadrivalente
             sobre: "GARDASIL® é uma vacina (injeção) que ajuda a proteger contra diversas doenças causadas pelo papilomavírus humano (HPV).",
             prevencao: "• cânceres de colo do útero (parte inferior do útero), da vulva (parte externa dos genitais femininos), da vagina e do ânus causados pelos tipos de HPV 16 e 18; <br/> • verrugas genitais causadas pelos tipos de HPV 6 e 11; </br> • infecções e lesões anormais e pré-cancerosas (alterações nas células com risco de se transformar em câncer) do colo do útero, da vagina, da vulva, de ânus e infecções causadas pelos tipos de HPV 6, 11, 16 e 18.",
             posologia: "",
