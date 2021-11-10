@@ -241,6 +241,7 @@
  @media (max-width:700px) {
    .card-agendamento {
      width: auto;
+     margin-top: 60px !important;
      margin-bottom: 40px !important;
    }
 
@@ -272,7 +273,7 @@
 
  .card-agendamento .btn-agendar-servico {
    width: 75%;
-   padding: 13px;
+   padding: 25px;
    margin-bottom: 40px;
    border: 2px solid #FF9C16;
    border-radius: 0;

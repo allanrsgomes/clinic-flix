@@ -28,6 +28,17 @@
     font-family: var(--fonte-familia-padrao);
 }
 
+@media screen and (max-width: 630px) {
+
+    #LHTesteInfo.content-header {
+        padding: 31px 18px 30px;
+    }
+
+    .partner-logo {
+        height: 56%;
+    }
+}
+
 .LHWrapperBody div.LHHeaderInfo .clinic-logo {
     height: 89px;
     width: max-content;
