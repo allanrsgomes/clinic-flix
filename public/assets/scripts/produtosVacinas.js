@@ -110,7 +110,7 @@ const produtosVacinas =
             img: "vacinas/Thumbs/default.png",
             urlInterna: "https://www.panvel.com/panvel/vacina-detalhe.do?p=",
             urlLoja: "https://www.panvel.com/panvel/vacina-pneumococica-10-synflorix-gsk/p-112216",
-            url: "",
+            url: "https://www.panvel.com/panvel/vacina-detalhe.do?p=4",
             // fornecedores: [ 
             //     { nome: 'Synflorix GSK', urlInterna: 'https://www.panvel.com/panvel/vacina-pneumococica-10-synflorix-gsk/p-112216'}
             // ],
