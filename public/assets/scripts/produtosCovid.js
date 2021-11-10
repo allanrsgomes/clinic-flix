@@ -46,6 +46,7 @@ const produtosTestesCovid = {
             id: 3,
             nome: "Anticorpo (IGG/IGM)",
             img: "testes-covid/Thumbs/anticorpo.png",
+            colorType: "light",
             sobre: "PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus no momento da coleta.<br/> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a OMS*",
             periodo: "Após 3 dias do início dos sintomas ou possível contato com vírus. <br/>*pode ser feito até 7 dias, após reduz a eficácia*",
             preparacao: "Não é necessário jejum ou qualquer preparo anterior a coleta. ",
