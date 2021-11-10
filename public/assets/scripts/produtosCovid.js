@@ -53,10 +53,12 @@ const produtosTestesCovid = {
             levar: "Você deve apresentar um documento com foto e o cupom fiscal da compra. O cupom pode ser apresentado em sua forma física ou digital, disponível no Site e App Panvel.",
             porque: "Os testes são importantes para os cálculos estatísticos e controle epidemiológico. Os diagnósticos são essenciais para a tomada de decisão das autoridades quanto às políticas públicas para a contenção das doenças. <br/> <br/>  Além disso, servem para o paciente alertar as pessoas próximas, com quem teve contato, para que façam o teste também.",
             prazo: "48 horas úteis.<br/>  Em caso de dúvidas, acesse o Panvel Fique Bem. ",
-            url: "/panvel/teste-covid.do?p=3",
-            urlLoja: "",
+            url: "https://www.panvel.com/panvel/teste-covid.do?p=1",
+            urlLoja: "https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-oral-ecodiagnostica/p-109572",
+            urlInterna: 'https://www.panvel.com/panvel/teste-covid.do?p=',
             tagsPalavras: ['covid'],
-            categoria: 'anticorpos'
+            categoria: 'anticorpos',
+            idAgendamento: '45'
         },
         {
             id: 11,
