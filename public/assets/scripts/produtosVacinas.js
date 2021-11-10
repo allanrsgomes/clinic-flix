@@ -74,7 +74,7 @@ const produtosVacinas =
         {
             id: 3,
             grupo: [1, 22],
-            nome: "Hepatite B - Infantil",
+            nome: "Hepatite B",
             sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença.<br/><br/>É composta por proteína de superfície do vírus da hepatite B purificado, hidróxido de alumínio, cloreto de sódio e água para injeção. Pode conter fosfato de sódio, fosfato de potássio e borato de sódio.<br/><br/>A rede pública utiliza a apresentação multidose (mais de uma dose por frasco), que contém timerosal (derivado do mercúrio) como conservante.",
             prevencao: "Infecção do fígado (hepatite) causada pelo vírus da hepatite B.",
             posologia: "Para a vacinação rotineira de crianças, o Programa Nacional de Imunizações (PNI) adotou o esquema de quatro doses: uma dose em formulação isolada ao nascimento e doses aos 2, 4 e 6 meses de vida, incluídas na vacina pentavalente de células inteiras. A Sociedade Brasileira de Pediatria (SBP) e a Sociedade Brasileira de Imunizações (SBIm) recomendam os esquemas de quatro doses (adotado pelo PNI) ou de três doses: ao nascimento, em formulação isolada, e aos 2 e 6 meses de vida, como parte da vacina hexavalente acelular. Aos 4 meses é recomendada a vacina penta acelular, que não contém o antígeno hepatite B em sua formulação.<br/>    Para crianças mais velhas, adolescentes e adultos não vacinados no primeiro ano de vida, o PNI, a SBP e a SBIm recomendam três doses, com intervalo de um ou dois meses entre primeira e a segunda doses e de seis  meses entre a primeira e a terceira.<br/>",
@@ -169,7 +169,7 @@ const produtosVacinas =
         {
             id: 7,
             grupo: [8, 10, 22],
-            nome: "Hepatite A - Infantil",
+            nome: "Hepatite A",
             sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença.<br/><br/>É composta por antígeno do vírus da hepatite A, sal de alumínio amorfo, estabilizante (varia conforme o fabricante), cloreto de sódio a 0,9%. Pode conter traços de antibiótico (neomicina), fenoxietanol e formaldeído.<br/><br/>Nos serviços privados de vacinação estão disponíveis as apresentações pediátrica (para uso até 15, 17 ou 19 anos de idade, dependendo do fabricante) e de adultos.",
             prevencao: "Hepatite A.",
             posologia: "Duas doses com intervalo de seis meses.<br/>    As sociedades brasileiras de Pediatria (SBP) e de Imunizações (SBIm) recomendam a aplicação rotineira aos 12 e 18 meses de idade, ou o mais cedo possível, quando a vacinação não ocorrer nestas idades recomendadas.<br/>    O Programa Nacional de Imunizações (PNI) alterou, em 201​7, a faixa etária do esquema de dose única da vacina para crianças entre 15 meses e antes de completar ​5 anos de idade.<br/>",
