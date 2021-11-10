@@ -385,9 +385,10 @@ div.LHThumbSlider {
         margin-left: unset;
     }
 
+    /* 
     .LHThumbSlider>.control-hover {
         display: none;
-    }
+    } */
 
     .thumbCategory:first {
         margin-left: unset;
