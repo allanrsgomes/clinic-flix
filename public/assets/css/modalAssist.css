@@ -1,0 +1,193 @@
+/*
+.modal -> .lhModal
+.modalPadrao -> lhModalPadrao
+.close -> lhModalClose
+*/
+
+/* Modal */
+
+div.lhModalPadrao,
+iframe.lhModalPadrao {
+  height: max-content;
+  width: 90vh;
+  height: 80vh;
+  border-radius: 8px;
+
+  background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/wp7131553-apple-tv-wallpapers-2x.png);
+  background-repeat: round;
+  background-size: contain;
+
+  transition: 1s;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  background-color: rgb(192, 210, 223);
+}
+
+
+
+/* The Modal (background) */
+
+div.lhModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.LHWrapperBody .clinicflix-modal {
+  background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/background/modal-bg.png);
+  background-size: cover;
+  background-color: #fefefe;
+  margin: 55px auto 0;
+  /* 15% from the top and centered */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  max-width: 1025px;
+  height: 100%;
+  max-height: 90vh;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.lhModalTitle {
+  font-family: 'Foco Bold Italic';
+  font-size: 46px;
+  color: rgba(255, 255, 255, 1);
+  margin: unset;
+  margin-bottom: 11px;
+}
+
+/* The Close Button */
+
+.lhModalClose {
+  color: white;
+  float: right;
+  font-size: 35px;
+  font-weight: bolder;
+  margin-right: 7px;
+  margin-top: 6px;
+}
+
+.lhModalClose:hover,
+.lhModalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  iframe.lhModalPadrao {
+    width: auto;
+  }
+
+  .lhModalTitle {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/* #modalAgendamento {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalAgendamento {
+    border: none;
+    overflow-y: auto;
+}
+
+#modalAgendamento iframe {
+    width: 90vh;
+    height: 80vh;
+    border: none;
+    overflow-y: auto;
+} */
+
+/* Modal Content */
+
+#LHModalOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+
+  /* left: -100%; */
+
+
+  /* Hidden by default */
+
+
+  display: none;
+
+
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* Stay in place */
+  z-index: 9;
+  /* Sit on top */
+
+
+
+  /* left: 0; */
+
+
+
+  top: 0;
+  width: 100%;
+  /* Full width */
+  max-height: 100%;
+  /* Full height */
+  overflow: hidden;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  -webkit-animation-name: fadeIn;
+  /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+#LHModalOverlay>dialog {
+  margin: auto;
+  border-radius: 8px;
+  max-height: 80vh;
+}
+
+#LHModalContent {
+  width: 100%;
+  height: 100%;
+}
+
+#servicoIndisponivel {
+  padding: 20px;
+  display: none;
+}
+
+#simplyBookIframe {
+  display: block;
+}

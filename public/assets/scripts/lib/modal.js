@@ -15,6 +15,8 @@ const initClinicModals = () => {
         //     btnModalAgendamento.classList.add('bt-abrir-agendamento');
         // }
 
+
+
         var btnQuestionario = document.querySelector('#covid-slide01')
 
         if (btnQuestionario) {
@@ -42,31 +44,17 @@ const initClinicModals = () => {
         const modalContent = document.getElementById('LHModalContent');
         const btCloseModal = document.getElementById('btCloseModal');
 
-
-
-
-        /* Fecha modal caso ocorra clique fora de sua área   ================= */
+        /* Fecha modal caso ocorra clique fora de sua área */
         btCloseModal.onclick = function () {
             closeModal();
-
         }
-
-        // btCloseModal.onclick = function () { // ============
-        //     modalOverlay.style.display = "none";
-        //     document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        // }
-
-
-
 
         /* Se há botões que abrem a modal do Questionário, ele inicializa a modal Questionário customizada.*/
         if (hasJSONQuestionaire) {
-            console.log('hasJSONQuestionaire');
             initModal(modalOverlay, modalContent, 'bt-abrir-assistVirtual', handleOpenAssistVirtual)
         }
 
-        if (hasModalAgendamento) { //aqui
-            //  console.log('hasAgendamento');
+        if (hasModalAgendamento) {
             initModal(modalOverlay, modalContent, 'bt-abrir-agendamento', handleOpenAgendamento)
         }
 
@@ -77,10 +65,7 @@ const initClinicModals = () => {
             console.log('hasAgendamento');
             initModal(modalOverlay, modalContent, 'btnVideo', handleOpenVideo)
         }
-
-
-
-        //TODO Put focus back to button =======================
+        //TODO Put focus back to button
         const closeModal = () => {
 
             modalOverlay.style.left = "-100%"
@@ -90,15 +75,9 @@ const initClinicModals = () => {
             }
 
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
+
+            location.reload();
         }
-
-        // const closeModal = () => { // ==============
-        //     modalOverlay.style.display = "none";
-        //     document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        // }
-
-
-
 
         // When the user clicks anywhere outside of the modal, close it
         window.addEventListener('click', function (event) {
@@ -115,7 +94,6 @@ const initClinicModals = () => {
         })
         69
     }
-
 
 }
 
